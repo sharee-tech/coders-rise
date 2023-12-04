@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+import data from "./data.json";
+import Navbar from "./components/Navbar";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <main className="container">
+        <div className="bg-light p-5 rounded">
+          <h1>College Explorer Platform</h1>
+          <p className="lead">Blurb about College Explorer Platform...</p>
+          <a className="btn btn-lg btn-primary" href="/search" role="button">
+            Find Colleges Now &raquo;
+          </a>
+        </div>
+      </main>
     </div>
   );
 }
-
-export default App;

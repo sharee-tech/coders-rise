@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Search from "./routes/Search";
+import Favorites from "./routes/Favorites";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="search" element={<Search />} />
+        <Route path="favorites" element={<Favorites />} />
+        <Route path="*" element={<h1>Route does not exist</h1>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
