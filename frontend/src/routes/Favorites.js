@@ -1,5 +1,6 @@
 import FavoritesList from "../../src/components/FavoritesList";
 import Navbar from "../components/Navbar";
+import Comparison from "../components/Comparison";
 
 export default function Favorites() {
   return (
@@ -13,6 +14,9 @@ export default function Favorites() {
           </div>
           <div className="col-sm-4">Profile</div>
         </div>
+      </div>
+      <div>
+        <Comparison />
       </div>
     </div>
   );
