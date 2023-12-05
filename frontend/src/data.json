@@ -1,29 +1,32 @@
 [
   {
-    "latest.school.city": "Normal",
-    "latest.school.state": "AL",
+    "school.city": "Normal",
+    "school.state": "AL",
     "latest.student.size": 5098,
     "latest.cost.tuition.in_state": 10024,
     "latest.cost.tuition.out_of_state": 18634,
-    "latest.school.degrees_awarded.highest": 4,
-    "school.name": "Alabama A & M University"
+    "school.degrees_awarded.highest": 4,
+    "school.name": "Alabama A & M University",
+    "id": 100654
   },
   {
-    "latest.school.city": "Birmingham",
-    "latest.school.state": "AL",
+    "school.city": "Birmingham",
+    "school.state": "AL",
     "latest.student.size": 13284,
     "latest.cost.tuition.in_state": 8568,
     "latest.cost.tuition.out_of_state": 20400,
-    "latest.school.degrees_awarded.highest": 4,
-    "school.name": "University of Alabama at Birmingham"
+    "school.degrees_awarded.highest": 4,
+    "school.name": "University of Alabama at Birmingham",
+    "id": 100663
   },
   {
-    "latest.school.city": "Montgomery",
-    "latest.school.state": "AL",
+    "school.city": "Montgomery",
+    "school.state": "AL",
     "latest.student.size": 251,
     "latest.cost.tuition.in_state": null,
     "latest.cost.tuition.out_of_state": null,
-    "latest.school.degrees_awarded.highest": 4,
-    "school.name": "Amridge University"
+    "school.degrees_awarded.highest": 4,
+    "school.name": "Amridge University",
+    "id": 100690
   }
 ]
