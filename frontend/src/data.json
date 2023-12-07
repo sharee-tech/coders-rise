@@ -28,5 +28,15 @@
     "school.degrees_awarded.highest": 4,
     "school.name": "Amridge University",
     "id": 100690
+  },
+  {
+    "school.city": "Montgomery",
+    "school.state": "AL",
+    "latest.student.size": 251,
+    "latest.cost.tuition.in_state": null,
+    "latest.cost.tuition.out_of_state": null,
+    "school.degrees_awarded.highest": 4,
+    "school.name": "Armpit University",
+    "id": 100000
   }
 ]

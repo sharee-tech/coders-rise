@@ -3,44 +3,59 @@ import data from "../data.json";
 import Button from "./Button";
 
 export default function FavoritesList() {
-  const [selectedFavorite, setSelectedFavorite] = useState(null);
-  const [colleges, setColleges] = useState(data);
-  const [compareCollege, setCompareCollege] = useState([]);
+  const [selectedFavorites, setSelectedFavorites] = useState([]);
+  const [collegesData, setCollegesData] = useState(data);
 
   return (
     <ul className="list-group">
-      {colleges.map((college) => (
+      {collegesData.map((college) => (
         <Favorite
           key={college["school.name"]}
           college={college}
-          compare={compareCollege}
-          onCompare={setCompareCollege}
+          selectedFavorites={selectedFavorites}
+          setSelectedFavorites={setSelectedFavorites}
         />
       ))}
     </ul>
   );
 }
 
-function Favorite({ college, compare, onCompare }) {
-  function handleConfirm(college) {
-    // check to see if college is in the "compare" array.
-    // if it is, remove it, if it is not, add it.
-    if (compare.includes(college.id)) {
-      console.log(compare);
-      onCompare(compare.filter((a) => a.id === college.id));
+function Favorite({ college, selectedFavorites, setSelectedFavorites }) {
+  const [selected, setSelected] = useState(false);
+  function handleConfirm() {
+    setSelected(!selected);
+    if (selectedFavorites.includes(college.id)) {
+      setSelectedFavorites(
+        selectedFavorites.filter((selected) => selected !== college.id)
+      );
     } else {
-      console.log(compare);
-      onCompare((compare) => [...compare, college.id]);
+      if (selectedFavorites.length < 3) {
+        setSelectedFavorites((selectedFavorites) => [
+          ...selectedFavorites,
+          college.id,
+        ]);
+      } else {
+        alert("Maximum of 3 Colleges are already selected.");
+      }
     }
   }
 
   return (
-    <li className="list-group-item">
-      <h3 className={compare.includes(college.id) ? "mark" : ""}>
+    <li className="list-group-item" key={college.id}>
+      <h3 className={selectedFavorites.includes(college.id) ? "mark" : ""}>
         {college["school.name"]}
       </h3>
-      <Button onClick={() => handleConfirm(college)}>Compare</Button>
-      <p>{compare}</p>
+      <Button
+        onClick={() => handleConfirm()}
+        css={
+          selectedFavorites.includes(college.id)
+            ? "btn-secondary"
+            : "btn-primary"
+        }
+      >
+        {selectedFavorites.includes(college.id) ? "Remove" : "Compare"}
+      </Button>
+      <p>{selectedFavorites}</p>
     </li>
   );
 }

@@ -12,7 +12,7 @@ export default function Favorites() {
           <div className="col-sm-8">
             <FavoritesList />
           </div>
-          <div className="col-sm-4">Profile</div>
+          {/* <div className="col-sm-4">Profile</div> */}
         </div>
       </div>
       <div>
