@@ -7,6 +7,7 @@
     "latest.cost.tuition.out_of_state": 18634,
     "school.degrees_awarded.highest": 4,
     "school.name": "Alabama A & M University",
+    "school.school_url": "www.aamu.edu/",
     "id": 100654
   },
   {
@@ -17,6 +18,7 @@
     "latest.cost.tuition.out_of_state": 20400,
     "school.degrees_awarded.highest": 4,
     "school.name": "University of Alabama at Birmingham",
+    "school.school_url": "https://www.uab.edu/",
     "id": 100663
   },
   {
@@ -27,16 +29,19 @@
     "latest.cost.tuition.out_of_state": null,
     "school.degrees_awarded.highest": 4,
     "school.name": "Amridge University",
+    "school.school_url": "https://www.amridgeuniversity.edu/",
     "id": 100690
   },
   {
-    "school.city": "Montgomery",
+    "latest.student.size": 7358,
+    "latest.cost.tuition.in_state": 11488,
+    "latest.cost.tuition.out_of_state": 23884,
+    "latest.academics.program.bachelors.communication": 1,
+    "school.name": "University of Alabama in Huntsville",
+    "school.school_url": "www.uah.edu/",
+    "school.city": "Huntsville",
     "school.state": "AL",
-    "latest.student.size": 251,
-    "latest.cost.tuition.in_state": null,
-    "latest.cost.tuition.out_of_state": null,
     "school.degrees_awarded.highest": 4,
-    "school.name": "Armpit University",
-    "id": 100000
+    "id": 100706
   }
 ]

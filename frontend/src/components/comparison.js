@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import data from "../data.json";
 import FavoritesList from "./FavoritesList";
 
-export default function Comparison() {
+export default function Comparison({ selectedFavorites }) {
   const [showCollege, setShowCollege] = useState(false);
   // // useEffect(() => {
   // //   // LOGIC FOR MAKING REQUEST
@@ -12,17 +12,18 @@ export default function Comparison() {
   // //     console.log("COMPONENT UNMOUNTED");
   // //   };
   // // }, []);
-  return (
-    <div className="container">
-      <div className="container">
-        {data.map((college) => (
-          <div className="row align-items-start">
-            <div className="col">{college["school.name"]}</div>
-            <div className="col">{college["school.state"]}</div>
-            <div className="col">{college["latest.student.size"]}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+
+  // return (
+  //   <div className="container">
+  //     <div className="container">
+  //       {data.map((college) => (
+  //         <div className="col align-items-start">
+  //           <div className="row">{college["school.name"]}</div>
+  //           <div className="row">{college["school.state"]}</div>
+  //           <div className="row">{college["latest.student.size"]}</div>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
 }
