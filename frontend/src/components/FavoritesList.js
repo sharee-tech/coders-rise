@@ -34,58 +34,55 @@ export default function FavoritesList() {
 
   return (
     <>
-      <ul className="list-group">
-        {collegesData.map((college) => (
-          <Favorite
-            key={college.id}
-            college={college}
-            selectedFavorites={selectedFavorites}
-            setSelectedFavorites={setSelectedFavorites}
-            toCompare={toCompare}
-            setToCompare={setToCompare}
-          />
-        ))}
-      </ul>
-      <div className="row">
-        {toCompare.map((college) => (
-          <CollegeCard details={college} key={college.id} />
-        ))}
+      <div className="container">
+        <ul className="list-group">
+          {collegesData.map((college) => (
+            <Favorite
+              key={college.id}
+              college={college}
+              selectedFavorites={selectedFavorites}
+              setSelectedFavorites={setSelectedFavorites}
+              toCompare={toCompare}
+              setToCompare={setToCompare}
+            />
+          ))}
+        </ul>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {toCompare.map((college) => (
+            <CollegeCard details={college} key={college.id} />
+          ))}
+        </div>
       </div>
     </>
   );
 }
 
 function CollegeCard({ details }) {
-  // const url = details["school.school_url"];
-  // const updatedCollegeCard = {};
-
-  // function checkHref(details) {
-  //   if (!url.includes("http")) {
-  //     alert("hit");
-  //     updatedCollegeCard = {
-  //       ...details,
-  //       "school.school_url": `https://${url}`,
-  //     };
-  //     console.log(updatedCollegeCard);
-  //   }
-  // }
-
   return (
-    <div className="col-sm-4 mt-5">
-      <div className="card">
+    <div className="col">
+      <div className="card mt-5 h-100">
         <div className="card-body">
           <h5 className="card-title">{details["school.name"]}</h5>
+          <h6>{`${details["school.degrees_awarded.highest"]} year | ${details["school.city"]}, ${details["school.state"]}`}</h6>
+          <hr></hr>
           <p className="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
+            Student Body Size <h6>{details["latest.student.size"]}</h6>
           </p>
+          <p className="card-text">More info...</p>
           <a
-            href={details["school.school_url"]}
+            href={
+              details["school.school_url"].includes("http")
+                ? details["school.school_url"]
+                : `https://${details["school.school_url"]}`
+            }
             target="_blank"
             className="btn btn-primary"
           >
             Visit
           </a>
+        </div>
+        <div className="card-footer">
+          <small className="text-muted">Last updated 3 mins ago</small>
         </div>
       </div>
     </div>
@@ -123,14 +120,11 @@ function Favorite({
   }
 
   return (
-    <li className="list-group-item" key={college.id}>
+    <li className="list-group-item p-3" key={college.id}>
       <Button
-        className="mr-4"
         onClick={() => handleConfirm()}
         css={
-          selectedFavorites.includes(college.id)
-            ? "btn-secondary"
-            : "btn-primary"
+          selectedFavorites.includes(college.id) ? "btn-danger" : "btn-primary"
         }
       >
         {selectedFavorites.includes(college.id) ? "Remove" : "Compare"}

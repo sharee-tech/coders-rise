@@ -1,6 +1,11 @@
 export default function Button({ children, onClick, css }) {
   return (
-    <button type="button" className={`btn ${css}`} onClick={onClick}>
+    <button
+      style={{ width: "100px" }}
+      type="button"
+      className={`btn ${css}`}
+      onClick={onClick}
+    >
       {" "}
       {children}
     </button>

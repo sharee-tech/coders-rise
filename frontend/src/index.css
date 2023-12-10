@@ -6,11 +6,12 @@
 
 h3 {
   display: inline-block;
+  margin-left: 4rem;
 }
 
-.list-group-item {
+/* .list-group-item {
   display: flex;
-}
+} */
 
 .container {
   margin-top: 4rem;
