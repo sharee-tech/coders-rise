@@ -6,7 +6,10 @@ export default function Favorites() {
     <div>
       <Navbar />
       <main className="container">
-        <h1>Welcome to Favorites </h1>
+        <h1>
+          {console.log(process.env.REACT_APP_API_KEY)}
+          Welcome to Favorites
+        </h1>
         <div className="d-flex flex-row">
           <div className="col-sm-12">
             <FavoritesList />

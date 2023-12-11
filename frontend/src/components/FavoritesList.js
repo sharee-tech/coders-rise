@@ -8,11 +8,11 @@ export default function FavoritesList() {
   const [toCompare, setToCompare] = useState([]);
 
   useEffect(() => {
-    const savedCollegeIds = [100654, 100663, 100690, 100812];
+    const savedCollegeIds = [100654, 100663, 100690, 222178];
     const endpoints = [];
     savedCollegeIds.map((id) =>
       endpoints.push(
-        `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=5A7Enb87q8JaBjpYKXjQgIu2hqXBu4mXhiQP4hv5&id=${id}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,latest.academics.program.bachelors.communication,school.school_url`
+        `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&id=${id}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,latest.academics.program.bachelors.communication,school.school_url`
       )
     );
 

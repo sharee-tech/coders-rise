@@ -23,7 +23,7 @@ export default function Form() {
 
           axios
             .get(
-              `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=5A7Enb87q8JaBjpYKXjQgIu2hqXBu4mXhiQP4hv5&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,latest.academics.program.bachelors.communication,school.school_url&school.state=${stateName}&per_page=100`
+              `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,latest.academics.program.bachelors.communication,school.school_url&school.state=${stateName}&per_page=100`
             )
             .then((res) => {
               setResults(res.data["results"]);
