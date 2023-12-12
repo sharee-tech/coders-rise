@@ -13,10 +13,9 @@ export default function Form(){
 
   const[degreeType, setDegreeType] = useState()
   const[stateName, setStateName] = useState("")
-  const[maxTuition, setMaxTuition] = useState()
+  const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   let results=[]
-  let schoolSizeInt= parseInt(schoolSize)
 
 
   // Using this function to update the state of degree
@@ -26,8 +25,9 @@ export default function Form(){
     console.log("here")
     data.map((datapoint, index) =>
     
-     ({datapoint}.datapoint["latest.cost.tuition.out_of_state"] >= {maxTuition}) ?
-    console.log({datapoint}.datapoint["school.name"]) : console.log("nope")
+     ({datapoint}.datapoint["latest.cost.tuition.out_of_state"] <= maxTuition) ?
+    results += {datapoint}.datapoint: 
+    console.log(results)
     
 
 
@@ -35,7 +35,7 @@ export default function Form(){
     }
 
   
-    console.log({data}.data[9]["latest.student.size"])
+    console.log({data}.data[9]["latest.cost.tuition.out_of_state"])
  
   console.log(degreeType)
   console.log(stateName)
