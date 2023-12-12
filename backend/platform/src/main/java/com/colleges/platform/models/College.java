@@ -2,6 +2,9 @@ package com.colleges.platform.models;
 
 import jakarta.persistence.*;
 
+//import jakarta.validation.constraints.NotBlank;
+//import jakarta.validation.constraints.Size;
+
 @Entity
 @Table(name="colleges")
 public class College {
@@ -10,13 +13,14 @@ public class College {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "college_id")
-    private int college_id;
-
     @Column(name = "user_id")
     private int user_id;
 
+    @Column(name = "college_id")
+    private int college_id;
+
     @Column(name = "notes")
+//    @Size(min=1,max=100, message = "Please enter a description 1 to 100 chars long")
     private String notes;
 
     @Column(name = "app_status")
@@ -26,9 +30,9 @@ public class College {
 
     }
 
-    public College(int college_id, int user_id, String notes, int app_status) {
-        this.college_id = college_id;
+    public College(int user_id, int college_id, String notes, int app_status) {
         this.user_id = user_id;
+        this.college_id = college_id;
         this.notes = notes;
         this.app_status = app_status;
     }

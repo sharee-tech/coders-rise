@@ -36,11 +36,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Hibernate Validator (Bean Validation API) -->
 <!--		<dependency>-->
-<!--			<groupId>io.github.cdimascio</groupId>-->
-<!--			<artifactId>java-dotenv</artifactId>-->
-<!--			<version>5.2.2</version>-->
+<!--			<groupId>org.hibernate.validator</groupId>-->
+<!--			<artifactId>hibernate-validator</artifactId>-->
+<!--			<version>7.0.1.Final</version>-->
 <!--		</dependency>-->
+<!--		&lt;!&ndash; Java EE API (includes validation annotations) &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>jakarta.platform</groupId>-->
+<!--			<artifactId>jakarta.jakartaee-api</artifactId>-->
+<!--			<version>9.1.0</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>

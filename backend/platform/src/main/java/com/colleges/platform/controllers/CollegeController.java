@@ -45,7 +45,7 @@ public class CollegeController {
     public ResponseEntity<College> createCollege(@RequestBody College college) {
         try {
             College _college = collegeRepository
-                    .save(new College(college.getApp_status(), college.getCollege_id(), college.getNotes(), college.getUser_id()));
+                    .save(new College(college.getUser_id(), college.getCollege_id(), college.getNotes(), college.getApp_status()));
             return new ResponseEntity<>(_college, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
