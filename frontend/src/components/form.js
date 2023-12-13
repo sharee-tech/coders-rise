@@ -4,6 +4,7 @@ import React from "react"
 import Button from "./Button"
 import states from "../routes/states"
 import { json } from "react-router-dom"
+import FetchExample from "./Fetch"
 
 
 
@@ -15,7 +16,7 @@ export default function Form(){
   const[stateName, setStateName] = useState("")
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
-  let results=[]
+  const [results, setResults] = useState([]);
 
 
   // Using this function to update the state of degree
@@ -26,7 +27,7 @@ export default function Form(){
     data.map((datapoint, index) =>
     
      ({datapoint}.datapoint["latest.cost.tuition.out_of_state"] <= maxTuition) ?
-    results += {datapoint}.datapoint: 
+    results.push += {datapoint}.datapoint["school.name"]: 
     console.log(results)
     
 
@@ -44,8 +45,12 @@ export default function Form(){
 
   return(
 
+    
+
 <div className="App">
   <form>
+
+    
 
     <div className="form-group" > 
 
@@ -102,9 +107,19 @@ export default function Form(){
 
     <Button onClick={() => handleConfirm(degreeType, stateName, maxTuition, schoolSize)}>Submit</Button>
     </form> 
+    <br></br>
+
+    <ul>
+      {results.map((college) => (
+        <li key= {college.id}>{college}[index]["school.name"]</li>
+      ))}
+    </ul>
+
+
+    <FetchExample/>
 </div>
 
-    
+  
 
   
   ) 
