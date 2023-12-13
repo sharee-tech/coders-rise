@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 
-h3 {
+/* h3 {
   display: inline-block;
   margin-left: 4rem;
-}
+  margin-right: 4rem;
+} */
 
 /* .list-group-item {
   display: flex;

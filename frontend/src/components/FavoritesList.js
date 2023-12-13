@@ -12,7 +12,7 @@ export default function FavoritesList() {
     const endpoints = [];
     savedCollegeIds.map((id) =>
       endpoints.push(
-        `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&id=${id}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,latest.academics.program.bachelors.communication,school.school_url`
+        `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&id=${id}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,school.school_url`
       )
     );
 
@@ -35,18 +35,29 @@ export default function FavoritesList() {
   return (
     <>
       <div className="container">
-        <ul className="list-group">
-          {collegesData.map((college) => (
-            <Favorite
-              key={college.id}
-              college={college}
-              selectedFavorites={selectedFavorites}
-              setSelectedFavorites={setSelectedFavorites}
-              toCompare={toCompare}
-              setToCompare={setToCompare}
-            />
-          ))}
-        </ul>
+        <table className="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Compare</th>
+              <th scope="col">College</th>
+              <th scope="col">Application Status</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody className="table-group-divider">
+            {collegesData.map((college) => (
+              <Favorite
+                key={college.id}
+                college={college}
+                selectedFavorites={selectedFavorites}
+                setSelectedFavorites={setSelectedFavorites}
+                toCompare={toCompare}
+                setToCompare={setToCompare}
+              />
+            ))}
+          </tbody>
+        </table>
+
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {toCompare.map((college) => (
             <CollegeCard details={college} key={college.id} />
@@ -66,8 +77,29 @@ function CollegeCard({ details }) {
           <h6>{`${details["school.degrees_awarded.highest"]} year | ${details["school.city"]}, ${details["school.state"]}`}</h6>
           <hr></hr>
           <p className="card-text">
-            Student Body Size <h6>{details["latest.student.size"]}</h6>
+            Student Body Size: <h6>{details["latest.student.size"]}</h6>
           </p>
+          <p className="card-text">
+            In-state Tuition:{" "}
+            <h6>
+              {details["latest.cost.tuition.in_state"] === null
+                ? "Data not provided"
+                : details["latest.cost.tuition.in_state"]}
+            </h6>
+          </p>
+          <p className="card-text">
+            Out-of-state Tuition:{" "}
+            <h6>
+              {details["latest.cost.tuition.out_of_state"] === null
+                ? "Data not provided"
+                : details["latest.cost.tuition.out_of_state"]}
+            </h6>
+          </p>
+          <p className="card-text">
+            Degree programs offered: <h6></h6>
+          </p>
+        </div>
+        <div className="card-footer">
           <p className="card-text">More info...</p>
           <a
             href={
@@ -80,9 +112,7 @@ function CollegeCard({ details }) {
           >
             Visit
           </a>
-        </div>
-        <div className="card-footer">
-          <small className="text-muted">Last updated 3 mins ago</small>
+          {/* <small className="text-muted">Last updated 3 mins ago</small> */}
         </div>
       </div>
     </div>
@@ -97,6 +127,8 @@ function Favorite({
   setToCompare,
 }) {
   const [selected, setSelected] = useState(false);
+  const [notes, setNotes] = useState("");
+
   function handleConfirm() {
     setSelected(!selected);
     // Existing - Remove
@@ -120,21 +152,44 @@ function Favorite({
   }
 
   return (
-    <li className="list-group-item p-3" key={college.id}>
-      <Button
-        onClick={() => handleConfirm()}
-        css={
-          selectedFavorites.includes(college.id) ? "btn-danger" : "btn-primary"
-        }
-      >
-        {selectedFavorites.includes(college.id) ? "Remove" : "Compare"}
-      </Button>
+    <tr>
+      <td>
+        <Button
+          onClick={() => handleConfirm()}
+          css={
+            selectedFavorites.includes(college.id)
+              ? "btn-danger"
+              : "btn-primary"
+          }
+        >
+          {selectedFavorites.includes(college.id) ? "Remove" : "Compare"}
+        </Button>
+      </td>
+      <td>
+        <h3 className={selectedFavorites.includes(college.id) ? "" : ""}>
+          {college["school.name"]}{" "}
+        </h3>
+      </td>
 
-      <h3 className={selectedFavorites.includes(college.id) ? "" : ""}>
-        {college["school.name"]}
-      </h3>
-
-      {/* <p>{selectedFavorites}</p> */}
-    </li>
+      <td>
+        <span className="badge rounded-pill text-bg-secondary ml-4">
+          Review
+        </span>
+      </td>
+      <td>
+        <div className="form">
+          <textarea
+            className="form-control"
+            // placeholder="Leave a comment here"
+            // id="floatingTextarea"
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+          >
+            {notes}
+          </textarea>
+          {/* <label for="floatingTextarea"></label> */}
+        </div>
+      </td>
+    </tr>
   );
 }
