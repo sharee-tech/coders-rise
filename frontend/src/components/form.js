@@ -5,6 +5,7 @@ import Button from "./Button"
 import states from "../routes/states"
 import { json } from "react-router-dom"
 import FetchExample from "./Fetch"
+import { useEffect } from "react"
 
 
 
@@ -21,34 +22,33 @@ export default function Form(){
 
   // Using this function to update the state of degree
 // whenever a new option is selected from the dropdown
+window.addEventListener("submit", function() {
+  fetch("http://api.data.gov/ed/collegescorecard/v1/schools.json?&api_key=6UImcdgzqt3EnU4PJLsXnv4slF74WmRKU4OJi0gs").
+  then((response) => response.json()).
+  then((data) => {
+      console.log(data.results);
+      setResults(data.results);
 
-  function handleConfirm(deg, loc, tui, size){
-    console.log("here")
-    data.map((datapoint, index) =>
-    
-     ({datapoint}.datapoint["latest.cost.tuition.out_of_state"] <= maxTuition) ?
-    results.push += {datapoint}.datapoint["school.name"]: 
-    console.log(results)
-    
+  })
+
+})
+
+var filteredResults= results.filter((element=> element.school.degrees_awarded.highest == 2))
 
 
-    )
-    }
 
-  
-    console.log({data}.data[9]["latest.cost.tuition.out_of_state"])
- 
-  console.log(degreeType)
-  console.log(stateName)
-  console.log(maxTuition)
-  console.log(schoolSize)
 
   return(
 
     
 
 <div className="App">
-  <form>
+  <form onSubmit={(e) => {
+    e.preventDefault();
+
+      
+    
+  }}>
 
     
 
@@ -63,6 +63,7 @@ export default function Form(){
         {/* Creating the default / starting option for our 
           dropdown.
          */}
+         value={degreeType}
         <option value= "degree level"> -- Select a degree level -- </option>
         <option value = "1">Non-degree granting </option>
         <option value="2">Associate Degree </option>
@@ -105,24 +106,37 @@ export default function Form(){
       </select>
     </div>
 
-    <Button onClick={() => handleConfirm(degreeType, stateName, maxTuition, schoolSize)}>Submit</Button>
+    <button type="submit" className="btn btn-primary">Submit</button>
     </form> 
     <br></br>
 
-    <ul>
-      {results.map((college) => (
-        <li key= {college.id}>{college}[index]["school.name"]</li>
-      ))}
-    </ul>
 
-
-    <FetchExample/>
-</div>
-
+<div>
+            {filteredResults.map((result) =>  {
+                return (
+                <div key={result.id}>  
+                  <ul>
+                    <li>School name: {result.latest.school.name}</li>
+                    <li>School city: {result.latest.school.city}</li>  
+                    <li>School tuition: {result.latest.cost.tuition.out_of_state}</li>
+                    <li>School size: {result.latest.student.size}</li>
+                                      
+                  </ul>  
+                </div>
+                )}
+           ) }
+        </div>
+    </div>
+  
   
 
   
   ) 
+    
+ 
+
+ 
+
 
   
 }

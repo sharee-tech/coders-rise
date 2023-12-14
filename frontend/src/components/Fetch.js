@@ -7,7 +7,7 @@ function FetchExample() {
 //window.addEventListener("load", function() {
     const [results, setResults] = useState([]);
     useEffect(() => {
-        fetch("http://api.data.gov/ed/collegescorecard/v1/schools.json?&api_key=6UImcdgzqt3EnU4PJLsXnv4slF74WmRKU4OJi0gs").
+        fetch("http://api.data.gov/ed/collegescorecard/v1/schools.json?&api_key=${process.env.COLLEGE_SCORECARD_API_KEY}").
         then((response) => response.json()).
         then((data) => {
             console.log(data.results);
@@ -16,7 +16,7 @@ function FetchExample() {
         })
    }, []);
 
-   var filteredResults= results.filter((element => element.latest.cost.tuition.out_of_state <= 12000 ))
+   var filteredResults= results.filter((element=> element.school.degrees_awarded.highest == 2))
 
    return(
         <div>
