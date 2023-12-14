@@ -3,7 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import data from "./data.json";
 import Navbar from "./components/Navbar";
-import Axios from "axios";
+import axios from "axios";
 
 export default function App() {
   return (

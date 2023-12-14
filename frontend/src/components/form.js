@@ -15,20 +15,26 @@ export default function Form() {
   //   console.log(id);
   // }
 
+  const baseUrl = `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
+  const fields = "&fields=school.name,latest.cost.tuition.in_state";
+  const stateParam = !!stateName ? `&school.state=${stateName}` : "";
+  const tuitionParam = maxTuition
+    ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`
+    : "";
+  const apiCall = baseUrl + fields + tuitionParam + stateParam;
+
+  console.log(apiCall);
+
   return (
     <>
       <form
         onSubmit={(e) => {
           e.preventDefault();
 
-          axios
-            .get(
-              `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,latest.academics.program.bachelors.communication,school.school_url&school.state=${stateName}&per_page=100`
-            )
-            .then((res) => {
-              setResults(res.data["results"]);
-              setCount(res.data["metadata"].total);
-            });
+          axios.get(apiCall).then((res) => {
+            setResults(res.data["results"]);
+            setCount(res.data["metadata"].total);
+          });
         }}
       >
         <div className="form-group">
@@ -70,7 +76,9 @@ export default function Form() {
 
       <ul>
         {results.map((college) => (
-          <li key={college.id}>{college["school.name"]}</li>
+          <li key={college.id}>
+            {college["school.name"]} - {college["latest.cost.tuition.in_state"]}
+          </li>
         ))}
       </ul>
     </>

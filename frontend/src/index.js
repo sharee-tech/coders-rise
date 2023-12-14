@@ -8,6 +8,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
+import EditFavorite from "./routes/Edit";
+import Edit from "./routes/Edit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +19,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="search" element={<Search />} />
         <Route path="favorites" element={<Favorites />} />
+        <Route path="favorites/:id" element={<Edit />} />
         <Route path="account" element={<Account />} />
         <Route path="*" element={<h1>Route does not exist</h1>} />
       </Routes>
