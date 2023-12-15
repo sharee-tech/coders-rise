@@ -22,7 +22,8 @@ export default function Form(){
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}`;
- const fields= "&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size"
+ const fields= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size`
+ 
 
  const apiCall = baseUrl+fields
 window.addEventListener("submit", function() {
@@ -34,18 +35,11 @@ window.addEventListener("submit", function() {
 
 //var filteredResults= results.filter((element=> element.latest.cost.tuition.out_of_state <= maxTuition))
 
-
-
-
-  return(
-
-    
+  return(   
 
 <div className="App">
   <form onSubmit={(e) => {
-    e.preventDefault();
-
-      
+    e.preventDefault();    
     
   }}>
 
@@ -59,9 +53,6 @@ window.addEventListener("submit", function() {
     */}
     <label value= "inputDegree">Select a degree:</label>
       <select className="form-control" onChange={(e) => setDegreeType(e.target.value)}> 
-        {/* Creating the default / starting option for our 
-          dropdown.
-         */}
          value={degreeType}
         <option value= "degree level"> -- Select a degree level -- </option>
         <option value = "1">Non-degree granting </option>
@@ -75,7 +66,8 @@ window.addEventListener("submit", function() {
     <label value= "inputState">Select a state:</label>
       <select className="form-control" onChange={(e) => setStateName(e.target.value)}>
         value= {stateName}
-        {states.map((state, index) => (
+        <option>Select a state</option>
+        {states.map((state, index) => (          
          <option value={state} key={index} >
             {state}
           </option>
@@ -86,11 +78,11 @@ window.addEventListener("submit", function() {
     <div className="form-group">
     <label value = {maxTuition}>Tuition maximum:</label>
     <input 
-    type="text" 
-    className="form-control" 
-    id="" 
-    placeholder="Enter maximum tuition"
-    onChange={(e) => setMaxTuition(e.target.value)}></input>
+      type="text" 
+      className="form-control" 
+      id="" 
+      placeholder="Enter maximum tuition"
+      onChange={(e) => setMaxTuition(e.target.value)}></input>
     </div>
    
 
@@ -110,7 +102,7 @@ window.addEventListener("submit", function() {
     <br></br>
 
 
-<div>
+  <div>
   
             {results.map((result) =>  {
                 return (
@@ -118,7 +110,7 @@ window.addEventListener("submit", function() {
                 <ul>
                     <li>School name: {result["school.name"]}</li>
                     <li>School state: {result["school.state"]}</li>  
-                    <li>School tuition: {result["latest.cost.tuition.in_state"]}</li>
+                    <li>School tuition in-state: ${result["latest.cost.tuition.in_state"]}</li>
                     <li>School size: {result["latest.student.size"]}</li>
                     <br></br>           
                   </ul> 
