@@ -6,6 +6,7 @@ import states from "../routes/states"
 import { json } from "react-router-dom"
 import FetchExample from "./Fetch"
 import { useEffect } from "react"
+import axios from "axios"
 
 
 
@@ -20,20 +21,18 @@ export default function Form(){
   const [results, setResults] = useState([]);
 
 
-  // Using this function to update the state of degree
-// whenever a new option is selected from the dropdown
+ const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}`;
+ const fields= "&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size"
+
+ const apiCall = baseUrl+fields
 window.addEventListener("submit", function() {
-  fetch("http://api.data.gov/ed/collegescorecard/v1/schools.json?&api_key=6UImcdgzqt3EnU4PJLsXnv4slF74WmRKU4OJi0gs").
-  then((response) => response.json()).
-  then((data) => {
-      console.log(data.results);
-      setResults(data.results);
-
-  })
-
+  axios.get(apiCall).then((res) => {
+    setResults(res.data["results"]);
+    //setCount(res.data["metadata"].total);
+  });
 })
 
-var filteredResults= results.filter((element=> element.school.degrees_awarded.highest == 2))
+//var filteredResults= results.filter((element=> element.latest.cost.tuition.out_of_state <= maxTuition))
 
 
 
@@ -112,20 +111,22 @@ var filteredResults= results.filter((element=> element.school.degrees_awarded.hi
 
 
 <div>
-            {filteredResults.map((result) =>  {
+  
+            {results.map((result) =>  {
                 return (
                 <div key={result.id}>  
-                  <ul>
-                    <li>School name: {result.latest.school.name}</li>
-                    <li>School city: {result.latest.school.city}</li>  
-                    <li>School tuition: {result.latest.cost.tuition.out_of_state}</li>
-                    <li>School size: {result.latest.student.size}</li>
-                                      
-                  </ul>  
+                <ul>
+                    <li>School name: {result["school.name"]}</li>
+                    <li>School state: {result["school.state"]}</li>  
+                    <li>School tuition: {result["latest.cost.tuition.in_state"]}</li>
+                    <li>School size: {result["latest.student.size"]}</li>
+                    <br></br>           
+                  </ul> 
+                  
                 </div>
                 )}
            ) }
-        </div>
+       </div>
     </div>
   
   

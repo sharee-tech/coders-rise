@@ -7,7 +7,7 @@ function FetchExample() {
 //window.addEventListener("load", function() {
     const [results, setResults] = useState([]);
     useEffect(() => {
-        fetch("http://api.data.gov/ed/collegescorecard/v1/schools.json?&api_key=${process.env.COLLEGE_SCORECARD_API_KEY}").
+        fetch("http://api.data.gov/ed/collegescorecard/v1/schools.json?&api_key=${process.env.REACT_APP_API_KEY}").
         then((response) => response.json()).
         then((data) => {
             console.log(data.results);
