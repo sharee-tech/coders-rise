@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import CollegeDataService from "../services/CollegeService";
 import axios from "axios";
 const userId = 152;
 
@@ -14,6 +15,12 @@ export default function EditFavorite({ collegeId }) {
   const [appStatus, setAppStatus] = useState(data.appStatus);
   const [notes, setNotes] = useState(data.notes);
 
+  function handleDelete() {
+    alert("hit delete");
+    CollegeDataService.remove(userId, collegeId).then((res) => {
+      console.log(res);
+    });
+  }
   return (
     <>
       <form
@@ -24,9 +31,11 @@ export default function EditFavorite({ collegeId }) {
           );
           // axios call to write to MySQL database table
           const dataForDb = { app_status: appStatus, notes: notes };
-          axios.update(userId, { dataForDb }).then((res) => {
-            console.log(res);
-          });
+          CollegeDataService.update(userId, collegeId, dataForDb).then(
+            (res) => {
+              console.log(res);
+            }
+          );
         }}
       >
         <div className="form-group">
@@ -71,7 +80,11 @@ export default function EditFavorite({ collegeId }) {
         <button type="submit" className="btn btn-primary">
           Save Changes
         </button>
-        <button type="button" className="btn btn-danger">
+        <button
+          type="button"
+          className="btn btn-danger"
+          onClick={() => handleDelete()}
+        >
           Delete Favorite College
         </button>
       </form>

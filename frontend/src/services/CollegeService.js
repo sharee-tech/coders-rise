@@ -1,7 +1,8 @@
 import http from "../http-common";
 
-const getAll = () => {
-  return http.get("/colleges");
+//  Get all colleges given a specific userId
+const getAll = (userId) => {
+  return http.get(`/colleges/${userId}`);
 };
 
 const get = (id) => {
@@ -12,13 +13,15 @@ const create = (data) => {
   return http.post("/colleges", data);
 };
 
-const update = (id, data) => {
-  return http.put(`/colleges/${id}`, data);
+// Update a specific saved college by userId AND collegeId (this one is working)
+const update = (userId, collegeId, data) => {
+  return http.put(`/colleges/${userId}/${collegeId}`, data);
 };
 
-// const remove = id => {
-//   return http.delete(`/colleges/${id}`);
-// };
+// Delete college from favorites list (this one is working)
+const remove = (userId, collegeId) => {
+  return http.delete(`/colleges/${userId}/${collegeId}`);
+};
 
 // const removeAll = () => {
 //   return http.delete(`/colleges`);
@@ -28,8 +31,8 @@ const CollegeService = {
   getAll,
   get,
   create,
-  // update,
-  // remove,
+  update,
+  remove,
   // removeAll,
 };
 

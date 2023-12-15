@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CollegeDataService from "../services/CollegeService";
 import CollegeCard from "./CollegeCard";
 import Favorite from "./Favorite";
 
@@ -7,10 +8,23 @@ export default function FavoritesList() {
   const [selectedFavorites, setSelectedFavorites] = useState([]);
   const [collegesData, setCollegesData] = useState([]);
   const [toCompare, setToCompare] = useState([]);
+  const userId = 152;
 
   useEffect(() => {
     // retrieve array of college id's from search page
     const savedCollegeIds = [100654, 100663, 100690, 222178];
+    const savedCollegeIdsFromDB = [];
+    CollegeDataService.getAll(userId)
+      .then((res) => {
+        res.data.forEach((response) => {
+          savedCollegeIdsFromDB.push(response.collegeId);
+          console.log(savedCollegeIdsFromDB);
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
     const endpoints = [];
     savedCollegeIds.map((id) =>
       endpoints.push(
