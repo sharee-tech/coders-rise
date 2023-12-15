@@ -1,11 +1,6 @@
 import { useState } from "react"
-import data from "../data.json"
 import React from "react"
-import Button from "./Button"
 import states from "../routes/states"
-import { json } from "react-router-dom"
-import FetchExample from "./Fetch"
-import { useEffect } from "react"
 import axios from "axios"
 
 
@@ -14,18 +9,23 @@ export default function Form(){
 
   
 
-  const[degreeType, setDegreeType] = useState()
+  const[degreeType, setDegreeType] = useState(0)
   const[stateName, setStateName] = useState("")
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
 
 
- const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}`;
- const fields= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size`
+ const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
+ const fieldsDefault= `&fields=school.name,id,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest`
+ const stateParam = stateName ? `&school.state=${stateName}`: ""
+ const tuitionParam = maxTuition
+ ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`
+ : "";
  
 
- const apiCall = baseUrl+fields
+ const apiCall = baseUrl+fieldsDefault
+ console.log(apiCall)
 window.addEventListener("submit", function() {
   axios.get(apiCall).then((res) => {
     setResults(res.data["results"]);
@@ -33,7 +33,13 @@ window.addEventListener("submit", function() {
   });
 })
 
-//var filteredResults= results.filter((element=> element.latest.cost.tuition.out_of_state <= maxTuition))
+var filteredResults= results.filter((results) => {return (results["latest.cost.tuition.in_state"] <= maxTuition) && 
+(results["latest.student.size"] <= schoolSize) && (results["school.degrees_awarded.highest"] == degreeType) &&
+(results["school.state"]== stateName)})
+console.log(stateName)
+console.log(degreeType)
+console.log(filteredResults)
+console.log(maxTuition)
 
   return(   
 
@@ -51,9 +57,8 @@ window.addEventListener("submit", function() {
       so that every time a new choice is selected, our degree state 
       updates and renders name of the degree.
     */}
-    <label value= "inputDegree">Select a degree:</label>
+    <label value= {degreeType}>Select a degree:</label>
       <select className="form-control" onChange={(e) => setDegreeType(e.target.value)}> 
-         value={degreeType}
         <option value= "degree level"> -- Select a degree level -- </option>
         <option value = "1">Non-degree granting </option>
         <option value="2">Associate Degree </option>
@@ -101,10 +106,10 @@ window.addEventListener("submit", function() {
     </form> 
     <br></br>
 
-
+          
   <div>
   
-            {results.map((result) =>  {
+            {filteredResults.map((result) =>  {
                 return (
                 <div key={result.id}>  
                 <ul>
@@ -112,6 +117,7 @@ window.addEventListener("submit", function() {
                     <li>School state: {result["school.state"]}</li>  
                     <li>School tuition in-state: ${result["latest.cost.tuition.in_state"]}</li>
                     <li>School size: {result["latest.student.size"]}</li>
+                    <li>School id: {result.id}</li>
                     <br></br>           
                   </ul> 
                   
@@ -119,9 +125,8 @@ window.addEventListener("submit", function() {
                 )}
            ) }
        </div>
-    </div>
-  
-  
+       
+    </div> 
 
   
   ) 
