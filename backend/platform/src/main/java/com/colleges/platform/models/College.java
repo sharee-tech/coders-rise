@@ -14,47 +14,47 @@ public class College {
     private int id;
 
     @Column(name = "user_id")
-    private int user_id;
+    private int userId;
 
     @Column(name = "college_id")
-    private int college_id;
+    private int collegeId;
 
     @Column(name = "notes")
 //    @Size(min=1,max=100, message = "Please enter a description 1 to 100 chars long")
     private String notes;
 
     @Column(name = "app_status")
-    private int app_status;
+    private int appStatus;
 
     public College() {
 
     }
 
-    public College(int user_id, int college_id, String notes, int app_status) {
-        this.user_id = user_id;
-        this.college_id = college_id;
+    public College(int userId, int collegeId, String notes, int appStatus) {
+        this.userId = userId;
+        this.collegeId = collegeId;
         this.notes = notes;
-        this.app_status = app_status;
+        this.appStatus = appStatus;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getCollege_id() {
-        return college_id;
+    public int getCollegeId() {
+        return collegeId;
     }
 
-    public void setCollege_id(int college_id) {
-        this.college_id = college_id;
+    public void setCollegeId(int collegeId) {
+        this.collegeId = collegeId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserid(int userId) {
+        this.userId = userId;
     }
 
     public String getNotes() {
@@ -65,22 +65,22 @@ public class College {
         this.notes = notes;
     }
 
-    public int getApp_status() {
-        return app_status;
+    public int getAppStatus() {
+        return appStatus;
     }
 
-    public void setApp_status(int app_status) {
-        this.app_status = app_status;
+    public void setAppStatus(int appStatus) {
+        this.appStatus = appStatus;
     }
 
     @Override
     public String toString() {
         return "College{" +
                 "id=" + id +
-                ", college_id=" + college_id +
-                ", user_id=" + user_id +
+                ", collegeId=" + collegeId +
+                ", userId=" + userId +
                 ", notes='" + notes + '\'' +
-                ", app_status=" + app_status +
+                ", appStatus=" + appStatus +
                 '}';
     }
 

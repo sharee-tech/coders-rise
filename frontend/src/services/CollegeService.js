@@ -12,9 +12,9 @@ const create = (data) => {
   return http.post("/colleges", data);
 };
 
-// const update = (id, data) => {
-//   return http.put(`/colleges/${id}`, data);
-// };
+const update = (id, data) => {
+  return http.put(`/colleges/${id}`, data);
+};
 
 // const remove = id => {
 //   return http.delete(`/colleges/${id}`);

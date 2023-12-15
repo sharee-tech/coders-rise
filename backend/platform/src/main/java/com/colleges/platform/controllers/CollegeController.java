@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+//import jakarta.validation.constraints.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,16 +20,20 @@ public class CollegeController {
     @Autowired
     CollegeRepository collegeRepository;
 
-    @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("employers", collegeRepository.findAll());
-        return "employers/index";
-    }
-
     @GetMapping("/colleges")
     public ResponseEntity<List<College>> getAllColleges() {
-        return new ResponseEntity<>(collegeRepository.findAll(), HttpStatus.OK);
+        try {
+            List<College> colleges = new ArrayList<College>();
+                collegeRepository.findAll().forEach(colleges::add);
+            if (colleges.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(colleges, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
+
 
     @GetMapping("/colleges/{id}")
     public ResponseEntity<College> getCollegeById(@PathVariable("id") Integer id) {
@@ -45,48 +50,49 @@ public class CollegeController {
     public ResponseEntity<College> createCollege(@RequestBody College college) {
         try {
             College _college = collegeRepository
-                    .save(new College(college.getUser_id(), college.getCollege_id(), college.getNotes(), college.getApp_status()));
+                    .save(new College(college.getUserId(), college.getCollegeId(), college.getNotes(), college.getAppStatus()));
             return new ResponseEntity<>(_college, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-//    @PutMapping("/colleges/{id}")
-//    public ResponseEntity<College> updateCollege(@PathVariable("id") Integer id, @RequestBody College college) {
-//        Optional<College> collegeData = collegeRepository.findById(id);
-//
-//        if (collegeData.isPresent()) {
-//            College _college = collegeData.get();
-//            _college.setTitle(college.getTitle());
-//            _college.setDescription(college.getDescription());
-//            _college.setPublished(college.isPublished());
-//            return new ResponseEntity<>(collegeRepository.save(_college), HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
+    @PutMapping("/colleges/{userId}/{collegeId}")
+    public ResponseEntity<College> updateCollege(@PathVariable("userId") Integer userId, @PathVariable("collegeId") Integer collegeId, @RequestBody College college) {
+        Optional<College> collegeData = collegeRepository.findByUserIdAndCollegeId(userId, collegeId);
 
-//    @DeleteMapping("/colleges/{id}")
-//    public ResponseEntity<HttpStatus> deleteCollege(@PathVariable("id") Integer id) {
-//        try {
-//            collegeRepository.deleteById(id);
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
+        if (collegeData.isPresent()) {
+            College _college = collegeData.get();
+            _college.setAppStatus(college.getAppStatus());
+            _college.setNotes(college.getNotes());
 
-//    @DeleteMapping("/colleges")
-//    public ResponseEntity<HttpStatus> deleteAllColleges() {
-//        try {
-//            collegeRepository.deleteAll();
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
-//
+            return new ResponseEntity<>(collegeRepository.save(_college), HttpStatus.OK);
+
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/colleges/{userId}/{collegeId}")
+    public ResponseEntity<HttpStatus> deleteCollege(@PathVariable("userId") Integer userId, @PathVariable("collegeId") Integer collegeId) {
+        try {
+           collegeRepository.deleteByUserIdAndCollegeId(userId, collegeId);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @DeleteMapping("/colleges")
+    public ResponseEntity<HttpStatus> deleteAllColleges() {
+        try {
+            collegeRepository.deleteAll();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
 
 }

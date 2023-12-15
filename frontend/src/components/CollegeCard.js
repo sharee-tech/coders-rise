@@ -14,13 +14,13 @@ export default function CollegeCard({ details }) {
             In-state Tuition:<br></br>
             {details["latest.cost.tuition.in_state"] === null
               ? "Data not provided"
-              : details["latest.cost.tuition.in_state"]}
+              : "$" + details["latest.cost.tuition.in_state"]}
           </p>
           <p className="card-text">
             Out-of-state Tuition:<br></br>
             {details["latest.cost.tuition.out_of_state"] === null
               ? "Data not provided"
-              : details["latest.cost.tuition.out_of_state"]}
+              : "$" + details["latest.cost.tuition.out_of_state"]}
           </p>
           <p className="card-text">
             Degree programs offered: <h6></h6>

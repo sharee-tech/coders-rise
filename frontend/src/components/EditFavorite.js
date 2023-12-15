@@ -1,25 +1,44 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import axios from "axios";
+const userId = 152;
 
-export default function EditFavorite(props) {
-  const [appStatus, setAppStatus] = useState(0);
-  const [notes, setNotes] = useState("");
-  // const location = useLocation();
-  // const { college } = location.state["college"];
-  // const [fav, setFav] = useState({ college });
-  // const { state } = props.location;
-  // const { name, as, customNotes } = state;
+export default function EditFavorite({ collegeId }) {
+  // Data passed over from React-Router (exists on location)
+  // Data contains {name, appStatus, notes}
+  const location = useLocation();
+  const { data } = location.state;
+
+  // State variables for EditFavorite component
+  const [collegeName, setCollegeName] = useState(data.name);
+  const [appStatus, setAppStatus] = useState(data.appStatus);
+  const [notes, setNotes] = useState(data.notes);
 
   return (
     <>
-      <p>School Name: </p>
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          alert(
+            `Saved App CollegeId ${collegeId} and Status: ${appStatus} and Notes: ${notes}`
+          );
           // axios call to write to MySQL database table
+          const dataForDb = { app_status: appStatus, notes: notes };
+          axios.update(userId, { dataForDb }).then((res) => {
+            console.log(res);
+          });
         }}
       >
         <div className="form-group">
+          <input
+            className="form-control"
+            type="text"
+            placeholder="Disabled input"
+            aria-label="Disabled input example"
+            disabled
+            value={data.name}
+          ></input>
+
           <label htmlFor="appStatus">Application Status</label>
           <select
             value={appStatus}
@@ -39,10 +58,9 @@ export default function EditFavorite(props) {
               Accepted
             </option>
           </select>
+          <label htmlFor="notes">Notes</label>
           <textarea
             className="form-control"
-            // placeholder="Leave a comment here"
-            // id="floatingTextarea"
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
           >
@@ -53,7 +71,7 @@ export default function EditFavorite(props) {
         <button type="submit" className="btn btn-primary">
           Save Changes
         </button>
-        <button type="submit" className="btn btn-danger">
+        <button type="button" className="btn btn-danger">
           Delete Favorite College
         </button>
       </form>

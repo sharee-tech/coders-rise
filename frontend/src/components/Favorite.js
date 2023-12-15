@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { DisplayAppStatus } from "./DisplayAppStatus";
 
 export default function Favorite({
   college,
@@ -10,11 +11,12 @@ export default function Favorite({
   setToCompare,
 }) {
   const [selected, setSelected] = useState(false);
-  const [notes, setNotes] = useState("");
+  const [notes, setNotes] = useState("Custom Note");
+  const [appStatus, setAppStatus] = useState(3);
   const dataToPass = {
     name: college["school.name"],
-    as: 0,
-    customNotes: "This is the best",
+    appStatus: appStatus,
+    notes: notes,
   };
 
   function handleConfirm() {
@@ -60,22 +62,23 @@ export default function Favorite({
       </td>
 
       <td>
-        <span className="badge rounded-pill text-bg-secondary ml-4">
-          Review
-        </span>
+        {/* <span className="badge rounded-pill text-bg-secondary ml-4">
+          {appStatus}
+        </span> */}
+        <DisplayAppStatus status={appStatus} />
       </td>
       <td>
         <div className="form">
-          <p>notes</p>
+          <p>{notes}</p>
           {/* <label for="floatingTextarea"></label> */}
         </div>
       </td>
       <td>
         <div className="form">
           <Link
-            to={{ pathname: `/favorites/${college.id}`, state: dataToPass }}
+            to={`/favorites/${college.id}`}
             // className="btn btn-outline-warning"
-            // state={{ college }}
+            state={{ data: dataToPass }}
             style={{ textDecoration: "none" }}
           >
             ✏️

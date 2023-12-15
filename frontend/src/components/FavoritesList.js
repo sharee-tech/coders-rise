@@ -9,6 +9,7 @@ export default function FavoritesList() {
   const [toCompare, setToCompare] = useState([]);
 
   useEffect(() => {
+    // retrieve array of college id's from search page
     const savedCollegeIds = [100654, 100663, 100690, 222178];
     const endpoints = [];
     savedCollegeIds.map((id) =>
