@@ -19,7 +19,7 @@ public class CollegeSearch {
 
                     // API endpoint for searching by name
                     String apiUrl = "https://api.data.gov/ed/collegescorecard/v1/schools?"
-                            + "api_key=9ZZyOXWjgPiz1iFHyL40BbmbzgVUVQhApNCAvH5M"
+                            + "api_key=YOURAPIKEY"
                             + "&school.name=" + encodedCollegeName;
 
                     // Make HTTP GET request
