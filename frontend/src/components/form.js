@@ -14,38 +14,37 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
+  const[schoolRange, setSchoolRange] = useState(0)
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
- const fieldsDefault= `&fields=school.name,id,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest`
- const stateParam = stateName ? `&school.state=${stateName}`: ""
- const tuitionParam = maxTuition
- ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`
- : "";
+ const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest`
+ const stateParam = !!stateName ? `&school.state=${stateName}`: ""
+ const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
+ const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
+ const schoolSizeParam= !schoolSize == 0 ? `&latest.student.size__range=${schoolRange}..${schoolSize}` : ""
  
 
- const apiCall = baseUrl+fieldsDefault
+ const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam
  console.log(apiCall)
-window.addEventListener("submit", function() {
-  axios.get(apiCall).then((res) => {
-    setResults(res.data["results"]);
-    //setCount(res.data["metadata"].total);
-  });
-})
 
-var filteredResults= results.filter((results) => {return (results["latest.cost.tuition.in_state"] <= maxTuition) && 
-(results["latest.student.size"] <= schoolSize) && (results["school.degrees_awarded.highest"] == degreeType) &&
-(results["school.state"]== stateName)})
+
 console.log(stateName)
 console.log(degreeType)
-console.log(filteredResults)
+console.log(results)
 console.log(maxTuition)
+console.log(schoolSize)
 
   return(   
 
 <div className="App">
   <form onSubmit={(e) => {
     e.preventDefault();    
+
+    axios.get(apiCall).then((res) => {
+      setResults(res.data["results"]);
+      //setCount(res.data["metadata"].total);
+    });
     
   }}>
 
@@ -94,11 +93,11 @@ console.log(maxTuition)
    <div className="form-group" > 
 
       <label value= {schoolSize}>Select a school size:</label>
-      <select className="form-control" onChange={(e) => setSchoolSize(e.target.value)}> 
+      <select className="form-control" onChange={(e) => setSchoolSize(e.target.value) && setSchoolRange(e.target.value)}> 
         <option value= "school size"> -- Select a school size -- </option>
-        <option value = "2000">small: under 2,000 </option>
-        <option value="medium">medium: 2,000-15,000</option>
-        <option value="large">large: 15,000+ </option>      
+        <option value = "2000" schoolRange = "1">small: under 2,000 </option>
+        <option value="14999" schoolRange="2001">medium: 2,000-15,000</option>
+        <option value="100000" schoolRange="15000">large: 15,000+ </option>      
       </select>
     </div>
 
@@ -109,7 +108,7 @@ console.log(maxTuition)
           
   <div>
   
-            {filteredResults.map((result) =>  {
+            {results.map((result) =>  {
                 return (
                 <div key={result.id}>  
                 <ul>
@@ -117,7 +116,6 @@ console.log(maxTuition)
                     <li>School state: {result["school.state"]}</li>  
                     <li>School tuition in-state: ${result["latest.cost.tuition.in_state"]}</li>
                     <li>School size: {result["latest.student.size"]}</li>
-                    <li>School id: {result.id}</li>
                     <br></br>           
                   </ul> 
                   

@@ -17,6 +17,9 @@ function FetchExample() {
    }, []);
 
    var filteredResults= results.filter((element=> element.school.degrees_awarded.highest == 2))
+   var filteredResults= results.filter((results) => {return (results["latest.cost.tuition.in_state"] <= maxTuition) && 
+(results["latest.student.size"] <= schoolSize) && (results["school.degrees_awarded.highest"] == degreeType) &&
+(results["school.state"]== stateName)})
 
    return(
         <div>
