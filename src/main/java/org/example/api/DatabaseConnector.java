@@ -16,10 +16,9 @@ public class DatabaseConnector {
 
     // Establish a connection to the SQLite database
         public void connect() {
-            String url = "jdbc:mysql://localhost:3306/collegerise";
-            String username = "coderrise";
-            String password = "coderrise";
-
+            String url = "jdbc:mysql://localhost:3307/colleges";
+            String username = "colleges";
+            String password = "colleges";
             try {
                 connection = DriverManager.getConnection(url, username, password);
                 System.out.println("Connected to the database.");

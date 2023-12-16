@@ -1,0 +1,25 @@
+project/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── org/
+│   │   │   │   ├── example/
+│   │   │   │   │   ├── api/
+│   │   │   │   │   │   ├── CollegeScorecardAPI.java
+│   │   │   │   │   │   └── DatabaseConnector.java
+│   │   │   │   │   │
+│   │   │   │   │   └── models/
+│   │   │   │   │       └── College.java
+│   │   │   │   │
+│   │   │   │   └── Application.java (Main Java file)
+│   │   │   │
+│   │   │   └── resources/
+│   │   │       └── react (frontend)
+│   │   │
+│   │   └── resources/
+│   │       └── application.properties (Backend configs, like DB connection details)
+│   │
+│   └── test/ (Tests if any)
+│
+└
