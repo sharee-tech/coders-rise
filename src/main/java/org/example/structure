@@ -1,3 +1,20 @@
+DATABASE:
+└──User table/
+        ├── UserID (pk) ──|
+        ├── Username      │
+        └── Password      │
+                          │
+└──SavedColleges table/   │
+        ├── ID (pk)       │
+        ├── CollegeID ────│─────
+        ├── CustomNote    │     │
+        └── UserID (FK) ──      │
+                                │
+└──FavColleges table/           │
+        ├── ID (pk)             │
+        ├── FavoriteTimes       │
+        └── CollegeID (FK) ──────
+
 project/
 │
 ├── src/
@@ -5,14 +22,25 @@ project/
 │   │   ├── java/
 │   │   │   ├── org/
 │   │   │   │   ├── example/
-│   │   │   │   │   ├── api/
-│   │   │   │   │   │   ├── CollegeScorecardAPI.java
-│   │   │   │   │   │   └── DatabaseConnector.java
+│   │   │   │   │   ├── services/
+│   │   │   │   │   │   ├── CollegeServices.java
+│   │   │   │   │   │   ├── UserService.java
 │   │   │   │   │   │
 │   │   │   │   │   └── models/
-│   │   │   │   │       └── College.java
+│   │   │   │   │   │   └── College.java
+│   │   │   │   │   │   ├── User.java
+│   │   │   │   │   │   ├── UserService.java
+│   │   │   │   │   │
+│   │   │   │   │   └── Repositories/
+│   │   │   │   │   │   ├── CollegeRepository.java
+│   │   │   │   │   │   ├── UserRepository.java
+│   │   │   │   │   │   ├── FavoriteTimesRepository.java
+│   │   │   │   │   │
+│   │   │   │   │   └── Configurations/
+│   │   │   │   │   │   ├── DatabaseConfig.java
+│   │   │   │   │   │   ├── SecurityConfig.java
 │   │   │   │   │
-│   │   │   │   └── Application.java (Main Java file)
+│   │   │   │   └── CollegeExplorerApplication.java (Main Java file)
 │   │   │   │
 │   │   │   └── resources/
 │   │   │       └── react (frontend)
