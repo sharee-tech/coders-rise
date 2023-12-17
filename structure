@@ -29,7 +29,9 @@ project/
 │   │   │   │   │   └── models/
 │   │   │   │   │   │   └── College.java
 │   │   │   │   │   │   ├── User.java
-│   │   │   │   │   │   ├── UserService.java
+│   │   │   │   │   │
+│   │   │   │   │   └── controllers/
+│   │   │   │   │   │   └── CollegeController.java
 │   │   │   │   │   │
 │   │   │   │   │   └── Repositories/
 │   │   │   │   │   │   ├── CollegeRepository.java

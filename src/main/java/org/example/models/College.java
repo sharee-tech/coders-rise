@@ -1,68 +1,86 @@
-
-/*
-Created by grayson cummins
- */
 package org.example.models;
+import jakarta.persistence.*;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
+@Entity
+@Table(name="colleges")
 public class College {
-    private String name;
-    private String city;
-    private String state;
-    private String website;
-    // Add more attributes as needed
 
-    // Constructors
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @Column(name = "userId")
+    private int userId;
+
+    @Column(name = "collegeId")
+    private int collegeId;
+
+    @Column(name = "notes")
+//    @Size(min=1,max=100, message = "Please enter a description 1 to 100 chars long")
+    private String notes;
+
+    @Column(name = "appStatus")
+    private int appStatus;
+
     public College() {
+
     }
 
-    public College(String name, String city, String state, String country, String website) {
-        this.name = name;
-        this.city = city;
-        this.state = state;
+    public College(int userId, int collegeId, String notes, int appStatus) {
+        this.userId = userId;
+        this.collegeId = collegeId;
+        this.notes = notes;
+        this.appStatus = appStatus;
     }
 
-    // Getters and Setters
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getCollegeId() {
+        return collegeId;
     }
 
-    public String getCity() {
-        return city;
+    public void setCollegeId(int collegeId) {
+        this.collegeId = collegeId;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public int getUserId() {
+        return userId;
     }
 
-    public String getState() {
-        return state;
+    public void setUserid(int userId) {
+        this.userId = userId;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public String getNotes() {
+        return notes;
     }
 
-    public String getWebsite() {
-        return website;
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
-    public void setWebsite(String website) {
-        this.website = website;
+    public int getAppStatus() {
+        return appStatus;
     }
 
-    // toString() method for easy printing/debugging
+    public void setAppStatus(int appStatus) {
+        this.appStatus = appStatus;
+    }
+
     @Override
     public String toString() {
         return "College{" +
-                "name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", website='" + website + '\'' +
+                "id=" + id +
+                ", collegeId=" + collegeId +
+                ", userId=" + userId +
+                ", notes='" + notes + '\'' +
+                ", appStatus=" + appStatus +
                 '}';
     }
+
 }
