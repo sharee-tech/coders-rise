@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Form from "../components/form";
+import Form from "../components/Form";
 
 export default function Search() {
   return (

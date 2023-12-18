@@ -6,7 +6,6 @@ import axios from "axios"
 
 
 export default function Form(){
-
   
 
   const[degreeType, setDegreeType] = useState(0)
@@ -14,17 +13,20 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
+  const [favorites, setFavorites] = useState([])
  
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
- const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest`
+ const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id`
  const stateParam = !!stateName ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
  const schoolSizeParam= schoolSize ==1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
  schoolSize == 3 ? '&latest.student.size__range=15001..100000' : "" 
  
+console.log(favorites)
+console.log(results)
 
  
 
@@ -112,14 +114,16 @@ export default function Form(){
           {results.map((result) =>  {
             return (
     
-              <tbody>       
+              <tbody>  
+                <tr key={result["school.id"]}>   
               <td className="checkbox">          
-                <input className="form-check-input" type="checkbox" value="" id="favoritesCheckbox"/>   
+                <input onClick={(e)=> setFavorites(e.target.value)} className="form-check-input" type="checkbox" value={result["id"]} id="favoritesCheckbox"/>   
                 </td>
               <td> {result["school.name"]}</td>  
               <td> {result["school.state"]}</td>
               <td>${result["latest.cost.tuition.in_state"]}</td>
-              <td> {result["latest.student.size"]}</td>    
+              <td> {result["latest.student.size"]}</td>   
+              </tr>   
               </tbody>
                 )}
             )}
