@@ -11,8 +11,8 @@ export default function Favorite({
   setToCompare,
 }) {
   const [selected, setSelected] = useState(false);
-  const [notes, setNotes] = useState("Custom Note");
-  const [appStatus, setAppStatus] = useState(3);
+  const [notes, setNotes] = useState(college.notes);
+  const [appStatus, setAppStatus] = useState(college.appStatus);
   const dataToPass = {
     name: college["school.name"],
     appStatus: appStatus,

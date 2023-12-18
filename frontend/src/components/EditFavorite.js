@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CollegeDataService from "../services/CollegeService";
-import axios from "axios";
 const userId = 152;
 
 export default function EditFavorite({ collegeId }) {
@@ -9,6 +8,7 @@ export default function EditFavorite({ collegeId }) {
   // Data contains {name, appStatus, notes}
   const location = useLocation();
   const { data } = location.state;
+  const navigate = useNavigate();
 
   // State variables for EditFavorite component
   const [collegeName, setCollegeName] = useState(data.name);
@@ -26,15 +26,13 @@ export default function EditFavorite({ collegeId }) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          alert(
-            `Saved App CollegeId ${collegeId} and Status: ${appStatus} and Notes: ${notes}`
-          );
           // axios call to write to MySQL database table
-          const dataForDb = { app_status: appStatus, notes: notes };
+          const dataForDb = { appStatus: appStatus, notes: notes };
           CollegeDataService.update(userId, collegeId, dataForDb).then(
             (res) => {
-              console.log(res);
+              navigate("/favorites"); // Redirect to new page
             }
+            //SHOULD PROBABLY CONSIDER HANDLING ERROR CONDITION?
           );
         }}
       >
