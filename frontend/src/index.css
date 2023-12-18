@@ -12,6 +12,11 @@ h3 {
   display: flex;
 }
 
+.checkbox{ 
+  text-align: center; 
+/*Centering the text in a td of the table*/ 
+} 
+
 /* button {
   align-items: flex-end;
 } */

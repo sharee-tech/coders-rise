@@ -14,7 +14,7 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
-  //const[schoolRange, setSchoolRange] = useState(0)
+ 
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
@@ -24,22 +24,12 @@ export default function Form(){
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
  const schoolSizeParam= schoolSize ==1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
  schoolSize == 3 ? '&latest.student.size__range=15001..100000' : "" 
- console.log(degreeType)
+ 
 
  
 
  const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam
- console.log(apiCall)
-
-
-console.log(stateName)
-console.log(degreeType)
-console.log(results)
-console.log(maxTuition)
-console.log(schoolSize)
-console.log(schoolSizeParam)
-
-
+ 
   return(   
 
 <div className="App">
@@ -47,8 +37,7 @@ console.log(schoolSizeParam)
     e.preventDefault();    
 
     axios.get(apiCall).then((res) => {
-      setResults(res.data["results"]);
-      //setCount(res.data["metadata"].total);
+      setResults(res.data["results"]);      
     });
     
   }}>
@@ -108,27 +97,7 @@ console.log(schoolSizeParam)
     </form> 
     <br></br>  
 
-          
       <div>
-  
-            {results.map((result) =>  {
-                return (
-                <div key={result.id}>  
-                <ul>
-                    <li>School name: {result["school.name"]}</li>
-                    <li>School state: {result["school.state"]}</li>  
-                    <li>School tuition in-state: ${result["latest.cost.tuition.in_state"]}</li>
-                    <li>School size: {result["latest.student.size"]}</li>
-                    <br></br>           
-                  </ul> 
-                  
-                </div>
-                )}
-           ) }
-       </div>
-
-       
-          <div>
           <table className="table">
           <thead>
             <tr>
@@ -136,26 +105,25 @@ console.log(schoolSizeParam)
           <th scope="col">School Name</th>
           <th scope="col">School State</th>
           <th scope="col">School tuition in-state</th>
-          <th scope="col">School Size</th>
-          
+          <th scope="col">School Size</th>          
           </tr>
           </thead>
 
           {results.map((result) =>  {
-        return (
+            return (
     
-       <tbody>       
-          <td>          
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>   
-          </td>
-          <td> {result["school.name"]}</td>  
-          <td> {result["school.state"]}</td>
-          <td>${result["latest.cost.tuition.in_state"]}</td>
-          <td> {result["latest.student.size"]}</td>  
-        </tbody>
-        )}
-       )}
-       </table>
+              <tbody>       
+              <td className="checkbox">          
+                <input className="form-check-input" type="checkbox" value="" id="favoritesCheckbox"/>   
+                </td>
+              <td> {result["school.name"]}</td>  
+              <td> {result["school.state"]}</td>
+              <td>${result["latest.cost.tuition.in_state"]}</td>
+              <td> {result["latest.student.size"]}</td>    
+              </tbody>
+                )}
+            )}
+          </table>
       
        </div>   
 
