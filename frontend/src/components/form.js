@@ -14,7 +14,7 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
-  const[schoolRange, setSchoolRange] = useState(0)
+  //const[schoolRange, setSchoolRange] = useState(0)
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
@@ -22,7 +22,10 @@ export default function Form(){
  const stateParam = !!stateName ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
- const schoolSizeParam= !schoolSize == 0 ? `&latest.student.size__range=${schoolRange}..${schoolSize}` : ""
+ const schoolSizeParam= schoolSize ==1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
+ schoolSize == 3 ? '&latest.student.size__range=15001..100000' : "" 
+ console.log(degreeType)
+
  
 
  const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam
@@ -34,6 +37,8 @@ console.log(degreeType)
 console.log(results)
 console.log(maxTuition)
 console.log(schoolSize)
+console.log(schoolSizeParam)
+
 
   return(   
 
@@ -52,10 +57,6 @@ console.log(schoolSize)
 
     <div className="form-group" > 
 
-    {/* Creating our dropdown and passing it the handleDegreeChange 
-      so that every time a new choice is selected, our degree state 
-      updates and renders name of the degree.
-    */}
     <label value= {degreeType}>Select a degree:</label>
       <select className="form-control" onChange={(e) => setDegreeType(e.target.value)}> 
         <option value= "degree level"> -- Select a degree level -- </option>
@@ -93,20 +94,22 @@ console.log(schoolSize)
    <div className="form-group" > 
 
       <label value= {schoolSize}>Select a school size:</label>
-      <select className="form-control" onChange={(e) => setSchoolSize(e.target.value) && setSchoolRange(e.target.value)}> 
+      <select className="form-control" onChange={(e) => setSchoolSize(e.target.value)}> 
         <option value= "school size"> -- Select a school size -- </option>
-        <option value = "2000" schoolRange = "1">small: under 2,000 </option>
-        <option value="14999" schoolRange="2001">medium: 2,000-15,000</option>
-        <option value="100000" schoolRange="15000">large: 15,000+ </option>      
+        <option value = "1" >small: under 2,000 </option>
+        <option value="2" >medium: 2,000-15,000</option>
+        <option value="3">large: 15,000+ </option>      
       </select>
     </div>
 
+
+
     <button type="submit" className="btn btn-primary">Submit</button>
     </form> 
-    <br></br>
+    <br></br>  
 
           
-  <div>
+      <div>
   
             {results.map((result) =>  {
                 return (
@@ -123,15 +126,42 @@ console.log(schoolSize)
                 )}
            ) }
        </div>
+
        
-    </div> 
+          <div>
+          <table className="table">
+          <thead>
+            <tr>
+          <th scope="col">Save to Favorites</th>
+          <th scope="col">School Name</th>
+          <th scope="col">School State</th>
+          <th scope="col">School tuition in-state</th>
+          <th scope="col">School Size</th>
+          
+          </tr>
+          </thead>
 
-  
-  ) 
+          {results.map((result) =>  {
+        return (
     
- 
+       <tbody>       
+          <td>          
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>   
+          </td>
+          <td> {result["school.name"]}</td>  
+          <td> {result["school.state"]}</td>
+          <td>${result["latest.cost.tuition.in_state"]}</td>
+          <td> {result["latest.student.size"]}</td>  
+        </tbody>
+        )}
+       )}
+       </table>
+      
+       </div>   
 
- 
+    </div>
+    
+  )  
 
 
   

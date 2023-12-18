@@ -40,6 +40,17 @@ function FetchExample() {
     );
 
     }
+    
+schoolRangeSelector(schoolSize)
+
+    function schoolRangeSelector(schoolSize) {
+      if (schoolSize == 100000) {
+        setSchoolRange == 15000
+      } else if (schoolSize == 14999) {
+          setSchoolRange === 5000
+      } else setSchoolRange === 1
+     };
+    
 
 
 //)}
