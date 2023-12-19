@@ -1,3 +1,7 @@
+/*
+Orchestrates college-specific operations, serving as a bridge between controllers
+and data access layers while handling business logic and external API interactions.
+ */
 package org.example.services;
 
 

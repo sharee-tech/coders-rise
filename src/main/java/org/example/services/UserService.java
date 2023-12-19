@@ -1,3 +1,7 @@
+/*
+Manages user-specific operations, authentication,
+authorization, and user-related functionalities within the application.
+ */
 package org.example.services;
 
 import org.example.models.User;

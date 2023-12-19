@@ -1,3 +1,7 @@
+/*
+Handles data access and management for users within the database, offering
+methods for CRUD operations and user-related database interactions.
+ */
 package org.example.repositories;
 import org.example.models.User;
 

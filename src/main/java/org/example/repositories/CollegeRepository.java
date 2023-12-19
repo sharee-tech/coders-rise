@@ -1,3 +1,7 @@
+/*
+Facilitates data access and management for colleges within the database, providing
+methods for CRUD operations and college-related database interactions.
+ */
 package org.example.repositories;
 
 import org.example.models.College;

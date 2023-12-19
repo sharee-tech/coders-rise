@@ -1,3 +1,8 @@
+/*
+Handles incoming HTTP requests.
+Defines endpoints and routes, interacts with services, and prepares responses.
+
+ */
 package org.example.controllers;
 
 import org.example.models.College;

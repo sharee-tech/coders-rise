@@ -1,4 +1,9 @@
+/*
+Entry point of the Spring Boot application.
+Configures the application, initializes Spring context, and starts the application.
+*/
 package org.example;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
