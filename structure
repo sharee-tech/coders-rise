@@ -8,6 +8,7 @@ DATABASE:
         ├── ID (pk)       │
         ├── CollegeID ────│─────
         ├── CustomNote    │     │
+        ├── appStatus     │     │
         └── UserID (FK) ──      │
                                 │
 └──FavColleges table/           │

@@ -19,7 +19,7 @@ public class College {
     private int collegeId;
 
     @Column(name = "notes")
-//    @Size(min=1,max=100, message = "Please enter a description 1 to 100 chars long")
+    @Size(min=1,max=100, message = "Please enter a description 1 to 100 chars long")
     private String notes;
 
     @Column(name = "appStatus")
