@@ -1,6 +1,6 @@
 import { useState } from "react"
 import React from "react"
-import states from "../routes/states"
+import states from "../routes/States"
 import axios from "axios"
 
 
@@ -13,19 +13,25 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
-  const [favorites, setFavorites] = useState([])
+  let favorite= {favorites: []}
+  let handleFavoritesChange = (e) => {
+    const isChecked = e.target.checked;
+    if(isChecked){
+      favorite=({favorites: [...this.favorite.favorites, e.target.value]});
+    }
+  }
  
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
  const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.bachelors`
- const stateParam = !!stateName ? `&school.state=${stateName}`: ""
+ const stateParam = !stateName == "" ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
- const schoolSizeParam= schoolSize ==1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
- schoolSize == 3 ? '&latest.student.size__range=15001..100000' : "" 
+ const schoolSizeParam= schoolSize == 1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
+ schoolSize == 3  ? '&latest.student.size__range=15001..100000' : "" 
  
-console.log(favorites)
+console.log(favorite)
 console.log(results)
 
  
@@ -117,7 +123,7 @@ console.log(results)
               <tbody>  
                 <tr key={result["school.id"]}>   
               <td className="checkbox">          
-                <input onClick={(e)=> setFavorites(e.target.value)} className="form-check-input" type="checkbox" value={result["id"]} id="favoritesCheckbox"/>   
+                <input onChange={(e) => handleFavoritesChange} className="form-check-input" type="checkbox" value={result["id"]} id={result["id"]}/>   
                 </td>
               <td> {result["school.name"]}</td>  
               <td> {result["school.state"]}</td>
