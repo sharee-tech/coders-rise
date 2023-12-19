@@ -1,20 +1,27 @@
 DATABASE:
 └──User table/
         ├── UserID (pk) ──|
-        ├── Username      │
-        └── Password      │
-                          │
-└──SavedColleges table/   │
-        ├── ID (pk)       │
-        ├── CollegeID ────│─────
-        ├── CustomNote    │     │
-        ├── appStatus     │     │
-        └── UserID (FK) ──      │
-                                │
-└──FavColleges table/           │
-        ├── ID (pk)             │
-        ├── FavoriteTimes       │
-        └── CollegeID (FK) ──────
+        ├── Username ─────│─────────────│
+        └── Password      │             │
+        └── email ────────│─────────│   │
+                          │         │   │
+└──SavedColleges table/   │         │   │
+        ├── ID (pk)       │         │   │
+        ├── CollegeID ────│─────    │   │
+        ├── CustomNote    │     │   │   │
+        ├── appStatus     │     │   │   │
+        └── UserID (FK) ──      │   │   │
+                                │   │   │
+└──FavColleges table/           │   │   │
+        ├── ID (pk)             │   │   │
+        ├── FavoriteTimes       │   │   │
+        └── CollegeID (FK) ──────   │   │
+                                    │   │
+└──ContactUs table/                 │   │
+        ├── ID (pk)                 │   │
+        ├── username(FK) ───────────│───│
+        ├── text                    │
+        └── email (FK) ─────────────│
 
 project/
 │
