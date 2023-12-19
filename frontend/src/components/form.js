@@ -18,7 +18,7 @@ export default function Form(){
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
- const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id`
+ const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.bachelors`
  const stateParam = !!stateName ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
