@@ -2,6 +2,7 @@ import { useState } from "react"
 import React from "react"
 import states from "../routes/States"
 import axios from "axios"
+import degreePrograms from "../routes/DegreePrograms"
 
 
 
@@ -13,31 +14,34 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
-  let favorite= {favorites: []}
-  let handleFavoritesChange = (e) => {
-    const isChecked = e.target.checked;
-    if(isChecked){
-      favorite=({favorites: [...this.favorite.favorites, e.target.value]});
-    }
-  }
+  const[degreeProgram, setDegreeProgram]= useState("")
+  const [favorites, setFavorites] = useState( {favorites: []})
+
+
+  const handleFavoritesChange = (e) => {
+    
+}
  
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
- const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.bachelors`
+ const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.assoc.agriculture`
  const stateParam = !stateName == "" ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
  const schoolSizeParam= schoolSize == 1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
  schoolSize == 3  ? '&latest.student.size__range=15001..100000' : "" 
+ const degreeProgramParam = `&latest.academics.program.assoc.agriculture=0`
  
-console.log(favorite)
+console.log(favorites)
 console.log(results)
+console.log(degreePrograms[1].nameOfDegree)
+
 
  
 
  const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam
- 
+ console.log(apiCall)
   return(   
 
 <div className="App">
@@ -61,6 +65,20 @@ console.log(results)
         <option value="2">Associate Degree </option>
         <option value="3">Bachelor's Degree </option>
         <option value="4">Graduate Degree </option>       
+      </select>
+    </div>
+
+    <div className="form-group"> 
+    <label value= "degreeSelector">Select a degree program:</label>
+      <select className="form-control" onChange={(e) => setDegreeProgram(e.target.value)}>
+        value= {degreeProgram}
+        <option>Select a degree program</option>
+        i
+        {degreePrograms.map((degree, index) => (          
+         <option value={degree} key={index} >
+            {degreePrograms[index].nameOfDegree} 
+          </option>
+          ))}
       </select>
     </div>
 
@@ -122,9 +140,9 @@ console.log(results)
     
               <tbody>  
                 <tr key={result["school.id"]}>   
-              <td className="checkbox">          
-                <input onChange={(e) => handleFavoritesChange} className="form-check-input" type="checkbox" value={result["id"]} id={result["id"]}/>   
-                </td>
+              <th className="checkbox">          
+                <input onChange={(e) => setFavorites(e.target.value)} className="form-check-input" type="checkbox" value={result["id"]} id={result["id"]}/>   
+                </th>
               <td> {result["school.name"]}</td>  
               <td> {result["school.state"]}</td>
               <td>${result["latest.cost.tuition.in_state"]}</td>
