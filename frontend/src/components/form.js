@@ -15,23 +15,29 @@ export default function Form(){
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
   const[degreeProgram, setDegreeProgram]= useState("")
-  const [favorites, setFavorites] = useState( {favorites: []})
+  const [favorites, setFavorites] = useState([]);
 
 
-  const handleFavoritesChange = (e) => {
-    
-}
- 
+  const handleCheck = (event) => {
+    var updatedList = [...favorites];
+    if (event.target.checked) {
+      updatedList = [...favorites, event.target.value];
+    } else {
+      updatedList.splice(favorites.indexOf(event.target.value), 1);
+    }
+    setFavorites(updatedList);
+  };
+
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
- const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.assoc.agriculture`
+ const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.assoc.history`
  const stateParam = !stateName == "" ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
  const schoolSizeParam= schoolSize == 1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
  schoolSize == 3  ? '&latest.student.size__range=15001..100000' : "" 
- const degreeProgramParam = `&latest.academics.program.assoc.agriculture=0`
+ const degreeProgramParam = `&latest.academics.program.assoc.history`
  
 console.log(favorites)
 console.log(results)
@@ -141,7 +147,7 @@ console.log(degreePrograms[1].nameOfDegree)
               <tbody>  
                 <tr key={result["school.id"]}>   
               <th className="checkbox">          
-                <input onChange={(e) => setFavorites(e.target.value)} className="form-check-input" type="checkbox" value={result["id"]} id={result["id"]}/>   
+                <input onChange={(e) => handleCheck(e)} className="form-check-input" type="checkbox" value={result["id"]} id={result["id"]}/>   
                 </th>
               <td> {result["school.name"]}</td>  
               <td> {result["school.state"]}</td>
