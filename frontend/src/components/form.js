@@ -2,7 +2,8 @@ import { useState } from "react"
 import React from "react"
 import states from "../routes/States"
 import axios from "axios"
-import degreePrograms from "../routes/DegreePrograms"
+import cip_4_digit from "../routes/cip_4_digit.json"
+
 
 
 
@@ -28,6 +29,10 @@ export default function Form(){
     setFavorites(updatedList);
   };
 
+  const degreePrograms= cip_4_digit.sort( function( a, b ) {
+    return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
+});
+
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
@@ -41,7 +46,8 @@ export default function Form(){
  
 console.log(favorites)
 console.log(results)
-console.log(degreePrograms[1].nameOfDegree)
+console.log(degreePrograms[2].title)
+console.log(degreePrograms[2].code)
 
 
  

@@ -1,6 +1,4 @@
 
-const degreePrograms = 
-
 [
   {
     "code": "0100",
@@ -1869,9 +1867,4 @@ const degreePrograms =
 ]
 
 
-degreePrograms.sort(function(a, b) { 
-    return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
-  })
-
-export default degreePrograms;
 
