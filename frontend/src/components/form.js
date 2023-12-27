@@ -15,7 +15,7 @@ export default function Form(){
   const[maxTuition, setMaxTuition] = useState(0)
   const[schoolSize, setSchoolSize] = useState(0)
   const [results, setResults] = useState([]);
-  const[degreeProgram, setDegreeProgram]= useState("")
+  const[degreeProgramChosen, setDegreeProgramChosen]= useState("")
   const [favorites, setFavorites] = useState([]);
 
 
@@ -39,20 +39,21 @@ export default function Form(){
  const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id`
  const stateParam = !stateName == "" ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
- const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
+ const degreeParam= !degreeType == 0 ? `&latest.programs.cip_4_digit.credential.level=${degreeType}`: ""
  const schoolSizeParam= schoolSize == 1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
  schoolSize == 3  ? '&latest.student.size__range=15001..100000' : "" 
- const degreeProgramParam = `&latest.academics.program.assoc.history=0`
+ const degreeProgramChosenParam = `&latest.programs.cip_4_digit.code=${degreeProgramChosen}`
  
 console.log(favorites)
 console.log(results)
 console.log(degreePrograms[2].title)
 console.log(degreePrograms[2].code)
+console.log(degreeProgramChosen)
 
 
  
 
- const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam+`&latest.programs.cip_4_digit.code=0100`+`&latest.programs.cip_4_digit.credential.level=3`
+ const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam+degreeProgramChosenParam
  console.log(apiCall)
   return(   
 
@@ -75,18 +76,17 @@ console.log(degreePrograms[2].code)
         <option value= "degree level"> -- Select a degree level -- </option>
         <option value = "1">Non-degree granting </option>
         <option value="2">Associate Degree </option>
-        <option value="3">Bachelor's Degree </option>
-        <option value="4">Graduate Degree </option>       
+        <option value="3">Bachelor's Degree </option>    
       </select>
     </div>
 
     <div className="form-group"> 
     <label value= "degreeSelector">Select a degree program:</label>
-      <select className="form-control" onChange={(e) => setDegreeProgram(e.target.value)}>
-        value= {degreeProgram}
+      <select className="form-control" onChange={(e) => setDegreeProgramChosen(e.target.value)}>
+        value= {degreeProgramChosen}
         <option>Select a degree program</option>
         {degreePrograms.map((degree, index) => (          
-         <option value={degree} key={index} >
+         <option value={degree.code} key={index} >
             {degreePrograms[index].title} 
           </option>
           ))}
