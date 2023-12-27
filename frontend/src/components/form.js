@@ -31,13 +31,13 @@ export default function Form(){
 
 
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
- const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id,latest.academics.program.assoc.history`
+ const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id`
  const stateParam = !stateName == "" ? `&school.state=${stateName}`: ""
  const tuitionParam = maxTuition ? `&latest.cost.tuition.in_state__range=1..${maxTuition}`: "";
  const degreeParam= !degreeType == 0 ? `&school.degrees_awarded.highest=${degreeType}`: ""
  const schoolSizeParam= schoolSize == 1 ? '&latest.student.size__range=1..1999' : schoolSize == 2 ? '&latest.student.size__range=2000..15000' :
  schoolSize == 3  ? '&latest.student.size__range=15001..100000' : "" 
- const degreeProgramParam = `&latest.academics.program.assoc.history`
+ const degreeProgramParam = `&latest.academics.program.assoc.history=0`
  
 console.log(favorites)
 console.log(results)
@@ -46,7 +46,7 @@ console.log(degreePrograms[1].nameOfDegree)
 
  
 
- const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam
+ const apiCall = baseUrl+fieldsDefault+tuitionParam+stateParam+degreeParam+schoolSizeParam+`&latest.programs.cip_4_digit.code=0100`+`&latest.programs.cip_4_digit.credential.level=3`
  console.log(apiCall)
   return(   
 
@@ -79,10 +79,9 @@ console.log(degreePrograms[1].nameOfDegree)
       <select className="form-control" onChange={(e) => setDegreeProgram(e.target.value)}>
         value= {degreeProgram}
         <option>Select a degree program</option>
-        i
         {degreePrograms.map((degree, index) => (          
          <option value={degree} key={index} >
-            {degreePrograms[index].nameOfDegree} 
+            {degreePrograms[index].title} 
           </option>
           ))}
       </select>
@@ -133,15 +132,17 @@ console.log(degreePrograms[1].nameOfDegree)
           <table className="table">
           <thead>
             <tr>
-          <th scope="col">Save to Favorites</th>
-          <th scope="col">School Name</th>
-          <th scope="col">School State</th>
-          <th scope="col">School tuition in-state</th>
-          <th scope="col">School Size</th>          
-          </tr>
+              <th scope="col">Save to Favorites</th>
+              <th scope="col">School Name</th>
+              <th scope="col">School State</th>
+              <th scope="col">School tuition in-state</th>
+              <th scope="col">School Size</th>          
+            </tr>
           </thead>
 
           {results.map((result) =>  {
+
+            
             return (
     
               <tbody>  

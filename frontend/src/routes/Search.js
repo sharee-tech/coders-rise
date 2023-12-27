@@ -5,8 +5,12 @@ export default function Search() {
   return (
     <div>
       <Navbar />
-      <h1>Welcome to Search </h1>
-      <Form/>
+      <main className="container">
+        <h1>Welcome to Search </h1>
+        <div className="container">
+          <Form />
+        </div>
+      </main>
     </div>
   );
 }
