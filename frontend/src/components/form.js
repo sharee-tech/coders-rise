@@ -135,14 +135,14 @@ console.log(degreeProgramChosen)
     <br></br>  
 
       <div>
-          <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Save to Favorites</th>
-              <th scope="col">School Name</th>
-              <th scope="col">School State</th>
-              <th scope="col">School tuition in-state</th>
-              <th scope="col">School Size</th>          
+          <table className="table" key="school list table">
+          <thead key="table heading">
+            <tr key="table row heading">
+              <th scope="col" key="save to fav">Save to Favorites</th>
+              <th scope="col" key="school name head">School Name</th>
+              <th scope="col"key="school state head">School State</th>
+              <th scope="col"key="school tuition head">School tuition in-state</th>
+              <th scope="col"key="school size head">School Size</th>          
             </tr>
           </thead>
 
@@ -153,8 +153,8 @@ console.log(degreeProgramChosen)
     
               <tbody>  
                 <tr key={result["school.id"]}>   
-              <th className="checkbox">          
-                <input onChange={(e) => handleCheck(e)} className="form-check-input" type="checkbox" value={result["id"]} id={result["id"]}/>   
+              <th className="checkbox" key="favorites checkbox">          
+                <input onChange={(e) => handleCheck(e)} className="form-check-input" type="checkbox" value={result["id"]} key={result["id"]}/>   
                 </th>
               <td> {result["school.name"]}</td>  
               <td> {result["school.state"]}</td>

@@ -6,7 +6,7 @@ export default function Search() {
     <div>
       <Navbar />
       <main className="container">
-        <h1>Welcome to Search </h1>
+        <h1>Let's Start Your College Search!</h1>
         <div className="container">
           <Form />
         </div>
