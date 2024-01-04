@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
 import axios from "axios";
-import states from "../states";
+import states from "../States";
 
 export default function Form() {
   const [maxTuition, setMaxTuition] = useState("");
