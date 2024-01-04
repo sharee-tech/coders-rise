@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 
 import Form from "../../src/components/Form";
 
+
 export default function Search() {
   return (
     <div>

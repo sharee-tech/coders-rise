@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 
 import Profile from "../../src/components/Profile";
+
 import AddCollege from "../components/AddCollege";
 
 export default function Account() {
