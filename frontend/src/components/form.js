@@ -49,6 +49,7 @@ console.log(results)
 console.log(degreePrograms[2].title)
 console.log(degreePrograms[2].code)
 console.log(degreeProgramChosen)
+console.log(baseUrl)
 
 
  
