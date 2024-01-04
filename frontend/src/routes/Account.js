@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
-import Profile from "../components/Profile";
+
+import Profile from "../../src/components/Profile";
+
 import AddCollege from "../components/AddCollege";
 
 export default function Account() {
@@ -7,6 +9,7 @@ export default function Account() {
     <div>
       <Navbar />
       <h1>Welcome to Account </h1>
+
       <AddCollege />
     </div>
   );
