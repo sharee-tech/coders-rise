@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css";
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Search from "./routes/Search";
@@ -9,20 +9,24 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import "bootstrap/dist/css/bootstrap.css";
+import EditFavorite from "./routes/Edit";
+import Edit from "./routes/Edit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="search" element={<Search />} />
-        <Route path="favorites" element={<Favorites />} />
-        <Route path="account" element={<Account />} />
-        <Route path="*" element={<h1>Route does not exist</h1>} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="search" element={<Search />} />
+      <Route path="favorites" element={<Favorites />} />
+      <Route path="favorites/:id" element={<Edit />} />
+      <Route path="account" element={<Account />} />
+      <Route path="*" element={<h1>Route does not exist</h1>} />
+    </Routes>
+  </BrowserRouter>
+  /* </React.StrictMode> */
 );
 
 // If you want to start measuring performance in your app, pass a function
