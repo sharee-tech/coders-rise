@@ -4,10 +4,29 @@ its attributes to the database schema and encapsulating user-related data.
  */
 package org.example.models;
 
+import jakarta.persistence.*;
+
+
+
+@Entity
+@Table(name="user")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+
+    @Column(name = "userId")
     private int userID;
+
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "email")
     private String email;
 
     // Constructors, getters, setters
