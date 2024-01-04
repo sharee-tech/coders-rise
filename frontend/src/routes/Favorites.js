@@ -5,6 +5,7 @@ export default function Favorites() {
   return (
     <div>
       <Navbar />
+
       <main className="container">
         <h1>Welcome to Favorites</h1>
         <div className="d-flex flex-row">
