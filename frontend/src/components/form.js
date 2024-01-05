@@ -1,8 +1,8 @@
 import { useState } from "react"
 import React from "react"
-import states from "../routes/States"
+import states from "../services/States"
 import axios from "axios"
-import cip_4_digit from "../routes/cip_4_digit.json"
+
 
 
 
