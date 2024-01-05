@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-import data from "./data.json";
+
 import Navbar from "./components/Navbar";
 
 import axios from "axios";
