@@ -3,6 +3,7 @@ import React from "react"
 import states from "../services/States"
 import axios from "axios"
 
+import cip_4_digit from "../cip_4_digit.json"
 
 
 
@@ -32,6 +33,7 @@ export default function Form(){
   const degreePrograms= cip_4_digit.sort( function( a, b ) {
     return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
 });
+
 
 
 
