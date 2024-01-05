@@ -65,7 +65,7 @@ console.log(baseUrl)
 
     axios.get(apiCall).then((res) => {
       if(res.data["results"].length == 0) {
-        alert("No results!")
+        alert("There are no results for this search!")
       } else
       setResults(res.data["results"]);  
     });
