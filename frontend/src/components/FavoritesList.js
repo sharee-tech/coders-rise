@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import axios from "axios";
 import CollegeDataService from "../services/CollegeService";
 import CollegeCard from "./CollegeCard";
 import Favorite from "./Favorite";
+import UserContext from "../UserContext";
 
 export default function FavoritesList() {
   // state variables
@@ -11,22 +12,26 @@ export default function FavoritesList() {
   const [dataFromMySQL, setdataFromMySQL] = useState([]);
   const [dataFromCSC, setDataFromCSC] = useState([]);
   const [mergedData, setMergedData] = useState([]);
-
+  // const [render, setRender] = useState(false);
   // local variable
-  const userId = 152;
+  const { currentUser } = useContext(UserContext);
+  // const userId = currentUser.id;
+  // console.log(userId);
+  const userId = 54;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await CollegeDataService.getAll(userId);
+        const response = await CollegeDataService.getAll(currentUser.id);
         setdataFromMySQL(response.data);
       } catch (error) {
         console.error("Error fetching data", error);
       }
     };
-
-    fetchData();
-  }, []);
+    if (currentUser) {
+      fetchData();
+    }
+  }, [currentUser]);
 
   useEffect(() => {
     const fetchDataFromCSC = async () => {
@@ -74,9 +79,9 @@ export default function FavoritesList() {
   return (
     <>
       {!dataFromCSC.length > 0 ? (
-        <div class="d-flex align-items-center">
+        <div className="d-flex align-items-center">
           <strong role="status">Loading...</strong>
-          <div class="spinner-border ms-auto" aria-hidden="true"></div>
+          <div className="spinner-border ms-auto" aria-hidden="true"></div>
         </div>
       ) : (
         <div className="container">

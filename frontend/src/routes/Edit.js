@@ -6,7 +6,6 @@ export default function Edit() {
   const routeParams = useParams();
   return (
     <div>
-      <Navbar />
       <main className="container">
         <h1>Edit Favorite</h1>
         <EditFavorite collegeId={routeParams.id} />

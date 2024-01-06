@@ -23,7 +23,14 @@ export default function CollegeCard({ details }) {
               : "$" + details["latest.cost.tuition.out_of_state"]}
           </p>
           <p className="card-text">
-            Degree programs offered: <h6></h6>
+            Admission Rate:<br></br>
+            {details["latest.admissions.admission_rate.overall"]}
+          </p>
+          <p className="card-text">
+            Average SAT Score: <h6></h6>
+          </p>
+          <p className="card-text">
+            Average ACT Score: <h6></h6>
           </p>
         </div>
         <div className="card-footer">

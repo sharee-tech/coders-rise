@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import CollegeDataService from "../services/CollegeService";
-const userId = 152;
+const userId = 54;
 
 export default function EditFavorite({ collegeId }) {
   // Data passed over from React-Router (exists on location)
@@ -16,9 +16,9 @@ export default function EditFavorite({ collegeId }) {
   const [notes, setNotes] = useState(data.notes);
 
   function handleDelete() {
-    alert("hit delete");
     CollegeDataService.remove(userId, collegeId).then((res) => {
       console.log(res);
+      navigate("/favorites"); // Redirect to new page
     });
   }
   return (
@@ -69,22 +69,25 @@ export default function EditFavorite({ collegeId }) {
           <textarea
             className="form-control"
             value={notes}
-            onChange={(e) => setNotes(e.target.value)}
+            onChange={(e) =>
+              setNotes(e.target.value === "" ? null : e.target.value)
+            }
           >
             {notes}
           </textarea>
         </div>
-
-        <button type="submit" className="btn btn-primary">
-          Save Changes
-        </button>
-        <button
-          type="button"
-          className="btn btn-danger"
-          onClick={() => handleDelete()}
-        >
-          Delete Favorite College
-        </button>
+        <div className="form-group">
+          <button type="submit" className="btn btn-primary">
+            Save Changes
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => handleDelete()}
+          >
+            Delete Favorite College
+          </button>
+        </div>
       </form>
     </>
   );

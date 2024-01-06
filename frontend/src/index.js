@@ -10,19 +10,27 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import EditFavorite from "./routes/Edit";
 import Edit from "./routes/Edit";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
+    {/* <Routes> */}
+    {/* <Route path="/" element={<App />} />
       <Route path="search" element={<Search />} />
       <Route path="favorites" element={<Favorites />} />
       <Route path="favorites/:id" element={<Edit />} />
       <Route path="account" element={<Account />} />
       <Route path="*" element={<h1>Route does not exist</h1>} />
-    </Routes>
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+       */}
+
+    {/* </Routes> */}
+
+    <App />
   </BrowserRouter>
   /* </React.StrictMode> */
 );
