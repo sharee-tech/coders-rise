@@ -1,8 +1,8 @@
 import { useState } from "react"
 import React from "react"
-import states from "../routes/States"
+import states from "../services/States"
 import axios from "axios"
-import cip_4_digit from "../routes/cip_4_digit.json"
+import cip_4_digit from "../cip_4_digit.json"
 
 
 
@@ -35,6 +35,8 @@ export default function Form(){
 
 
 
+
+
  const baseUrl= `http://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&per_page=100`;
  const fieldsDefault= `&fields=school.name,latest.cost.tuition.in_state,school.state,latest.student.size,school.city,school.degrees_awarded.highest,id`
  const stateParam = !stateName == "" ? `&school.state=${stateName}`: ""
@@ -63,7 +65,11 @@ console.log(baseUrl)
     e.preventDefault();    
 
     axios.get(apiCall).then((res) => {
-      setResults(res.data["results"]);      
+      //call to API and setting results, sending alert if no results are found
+      if(res.data["results"].length == 0) {
+        alert("There are no results for this search!")
+      } else
+      setResults(res.data["results"]);  
     });
     
   }}>
@@ -147,9 +153,9 @@ console.log(baseUrl)
             </tr>
           </thead>
 
+          
           {results.map((result) =>  {
-
-            
+              
             return (
     
               <tbody>  

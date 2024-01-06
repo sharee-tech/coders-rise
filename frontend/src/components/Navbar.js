@@ -43,6 +43,16 @@ export default function Navbar() {
                 Account
               </a>
             </li>
+            <li className="nav-item">
+
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/contact"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </div>
