@@ -5,7 +5,7 @@ export default function Contact() {
   return(
     <div>
       <Navbar />
-      <h1>Please fill out the form to contact the development team</h1>
+      <h3>Please fill out the form to contact the development team</h3>
       <ContactForm />
     </div>
   );

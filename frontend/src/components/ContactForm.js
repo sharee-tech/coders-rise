@@ -1,14 +1,32 @@
+
+
 export default function ContactForm() {
 
-<form>
+
+    return(
+
+<form onSubmit={(e) => {e.preventDefault()}}>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
+    <label for="fName">First Name</label>
+    <input type="text" class="form-control" id="fName" placeholder="First Name"></input>
+  </div>
+
+  <div class="form-group">
+    <label for="lName">Last Name</label>
+    <input type="text" class="form-control" id="lName" placeholder="Last Name"></input>
+  </div>
+
+  <div class="form-group">
+    <label for="emailAdd">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" ></input>
   </div>
   
   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="contactMessage">Leave your message here</label>
+    <textarea class="form-control" id="contactMessage" rows="3"></textarea>
   </div>
+
+  <button type="submit" className="btn btn-primary" >Submit</button>
 </form>
+);
 }
