@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CoderRise.iml" filepath="$PROJECT_DIR$/.idea/modules/CoderRise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CoderRise.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CoderRise.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/src/CoderRise.src.iml" filepath="$PROJECT_DIR$/.idea/modules/src/CoderRise.src.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/src/main/CoderRise.src.main.iml" filepath="$PROJECT_DIR$/.idea/modules/src/main/CoderRise.src.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/src/main/resources/CoderRise.src.main.Resources.iml" filepath="$PROJECT_DIR$/.idea/modules/src/main/resources/CoderRise.src.main.Resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CoderRise.test.iml" filepath="$PROJECT_DIR$/.idea/modules/CoderRise.test.iml" />
+    </modules>
+  </component>
+</project>
