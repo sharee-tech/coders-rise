@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Search from "./routes/Search";
@@ -7,9 +8,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
 import "bootstrap/dist/css/bootstrap.css";
 import EditFavorite from "./routes/Edit";
 import Edit from "./routes/Edit";
+import Contact from "./routes/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +24,7 @@ root.render(
       <Route path="favorites" element={<Favorites />} />
       <Route path="favorites/:id" element={<Edit />} />
       <Route path="account" element={<Account />} />
+      <Route path="contact" element={<Contact />} />
       <Route path="*" element={<h1>Route does not exist</h1>} />
     </Routes>
   </BrowserRouter>

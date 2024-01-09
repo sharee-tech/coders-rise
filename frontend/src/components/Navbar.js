@@ -24,6 +24,7 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
+
               <a
                 className="nav-link active"
                 aria-current="page"
@@ -33,12 +34,23 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
+
               <a
                 className="nav-link active"
                 aria-current="page"
                 href="/account"
               >
                 Account
+              </a>
+            </li>
+            <li className="nav-item">
+
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/contact"
+              >
+                Contact
               </a>
             </li>
           </ul>
