@@ -178,7 +178,4 @@ console.log(baseUrl)
     </div>
     
   )  
-
-
-  
 }
