@@ -5,34 +5,48 @@ its attributes to the database schema and encapsulating user-related data.
 package org.example.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
-
+import java.util.Optional;
 
 @Entity
-@Table(name="user")
-public class User {
+@Table(name = "user",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "username"),
+                @UniqueConstraint(columnNames = "email")
+        })
 
+
+
+
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-
-    @Column(name = "userId")
-    private int userID;
-
+    @NotBlank
+    @Size(min=6, max=64)
     @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
-    private String password;
-
+    @NotBlank
+    @Size(max = 64)
+    @Email
     @Column(name = "email")
     private String email;
 
+    @NotBlank
+    @Size(min=6, max=64)
+    @Column(name = "password")
+    private String password;
+
     // Constructors, getters, setters
 
-    public User(int userID, String username, String password, String email) {
-        this.userID = userID;
+    public User() {}
+
+    public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -40,12 +54,8 @@ public class User {
 
     // Getters and setters for the fields
 
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public int getId() {
+        return id;
     }
 
     public String getUsername() {

@@ -4,6 +4,9 @@ methods for CRUD operations and user-related database interactions.
  */
 package org.example.repositories;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface FavoriteTimesRepository {
     //database connections
 

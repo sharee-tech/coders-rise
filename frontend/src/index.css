@@ -4,38 +4,6 @@
   box-sizing: border-box;
 }
 
-h3 {
-  display: inline-block;
-}
-
-.list-group-item {
-  display: flex;
-}
-
-.checkbox{ 
-  text-align: center; 
-/*Centering the text in a td of the table*/ 
-} 
-
-
 .container {
   margin-top: 4rem;
 }
-
-/* button {
-  align-items: flex-end;
-} */
-
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */

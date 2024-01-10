@@ -1,0 +1,202 @@
+[
+  {
+      "latest.student.size": 5098,
+      "latest.cost.tuition.out_of_state": 18634,
+      "school.name": "Alabama A & M University",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Normal",
+      "school.state": "AL",
+      "id": 100654
+  },
+  {
+      "latest.student.size": 13284,
+      "latest.cost.tuition.out_of_state": 20400,
+      "school.name": "University of Alabama at Birmingham",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Birmingham",
+      "school.state": "AL",
+      "id": 100663
+  },
+  {
+      "latest.student.size": 251,
+      "latest.cost.tuition.out_of_state": null,
+      "school.name": "Amridge University",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Montgomery",
+      "school.state": "AL",
+      "id": 100690
+  },
+  {
+      "latest.student.size": 7358,
+      "latest.cost.tuition.out_of_state": 23884,
+      "school.name": "University of Alabama in Huntsville",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Huntsville",
+      "school.state": "AL",
+      "id": 100706
+  },
+  {
+      "latest.student.size": 3495,
+      "latest.cost.tuition.out_of_state": 19396,
+      "school.name": "Alabama State University",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Montgomery",
+      "school.state": "AL",
+      "id": 100724
+  },
+  {
+      "latest.student.size": 30725,
+      "latest.cost.tuition.out_of_state": 31090,
+      "school.name": "The University of Alabama",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Tuscaloosa",
+      "school.state": "AL",
+      "id": 100751
+  },
+  {
+      "latest.student.size": 940,
+      "latest.cost.tuition.out_of_state": 8620,
+      "school.name": "Central Alabama Community College",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 2,
+      "school.city": "Alexander City",
+      "school.state": "AL",
+      "id": 100760
+  },
+  {
+      "latest.student.size": 2511,
+      "latest.cost.tuition.out_of_state": null,
+      "school.name": "Athens State University",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Athens",
+      "school.state": "AL",
+      "id": 100812
+  },
+  {
+      "latest.student.size": 3742,
+      "latest.cost.tuition.out_of_state": 18820,
+      "school.name": "Auburn University at Montgomery",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Montgomery",
+      "school.state": "AL",
+      "id": 100830
+  },
+  {
+      "latest.student.size": 24782,
+      "latest.cost.tuition.out_of_state": 31986,
+      "school.name": "Auburn University",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Auburn",
+      "school.state": "AL",
+      "id": 100858
+  },
+  {
+      "latest.student.size": 1048,
+      "latest.cost.tuition.out_of_state": 20100,
+      "school.name": "Birmingham-Southern College",
+      "school.degrees_awarded.highest": 3,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Birmingham",
+      "school.state": "AL",
+      "id": 100937
+  },
+  {
+      "latest.student.size": 1107,
+      "latest.cost.tuition.out_of_state": 7128,
+      "school.name": "Chattahoochee Valley Community College",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 1,
+      "school.city": "Phenix City",
+      "school.state": "AL",
+      "id": 101028
+  },
+  {
+      "latest.student.size": 337,
+      "latest.cost.tuition.out_of_state": 17014,
+      "school.name": "South University-Montgomery",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Montgomery",
+      "school.state": "AL",
+      "id": 101116
+  },
+  {
+      "latest.student.size": 1336,
+      "latest.cost.tuition.out_of_state": 8550,
+      "school.name": "Enterprise State Community College",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 2,
+      "school.city": "Enterprise",
+      "school.state": "AL",
+      "id": 101143
+  },
+  {
+      "latest.student.size": 5217,
+      "latest.cost.tuition.out_of_state": 8850,
+      "school.name": "Coastal Alabama Community College",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 2,
+      "school.city": "Bay Minette",
+      "school.state": "AL",
+      "id": 101161
+  },
+  {
+      "latest.student.size": 1696,
+      "latest.cost.tuition.out_of_state": 23490,
+      "school.name": "Faulkner University",
+      "school.degrees_awarded.highest": 4,
+      "school.degrees_awarded.predominant": 3,
+      "school.city": "Montgomery",
+      "school.state": "AL",
+      "id": 101189
+  },
+  {
+      "latest.student.size": 3513,
+      "latest.cost.tuition.out_of_state": 6888,
+      "school.name": "Gadsden State Community College",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 2,
+      "school.city": "Gadsden",
+      "school.state": "AL",
+      "id": 101240
+  },
+  {
+      "latest.student.size": 57,
+      "latest.cost.tuition.out_of_state": null,
+      "school.name": "New Beginning College of Cosmetology",
+      "school.degrees_awarded.highest": 1,
+      "school.degrees_awarded.predominant": 1,
+      "school.city": "Albertville",
+      "school.state": "AL",
+      "id": 101277
+  },
+  {
+      "latest.student.size": 3191,
+      "latest.cost.tuition.out_of_state": 8790,
+      "school.name": "George C Wallace Community College-Dothan",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 1,
+      "school.city": "Dothan",
+      "school.state": "AL",
+      "id": 101286
+  },
+  {
+      "latest.student.size": 4303,
+      "latest.cost.tuition.out_of_state": 8550,
+      "school.name": "George C Wallace State Community College-Hanceville",
+      "school.degrees_awarded.highest": 2,
+      "school.degrees_awarded.predominant": 1,
+      "school.city": "Hanceville",
+      "school.state": "AL",
+      "id": 101295
+  }
+]
