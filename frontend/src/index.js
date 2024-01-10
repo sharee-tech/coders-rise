@@ -7,9 +7,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
 import "bootstrap/dist/css/bootstrap.css";
 import EditFavorite from "./routes/Edit";
 import Edit from "./routes/Edit";
+import Contact from "./routes/Contact";
 import Login from "./components/Login";
 import Register from "./components/Register";
 
@@ -23,6 +25,7 @@ root.render(
       <Route path="favorites" element={<Favorites />} />
       <Route path="favorites/:id" element={<Edit />} />
       <Route path="account" element={<Account />} />
+      <Route path="contact" element={<Contact />} />
       <Route path="*" element={<h1>Route does not exist</h1>} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />

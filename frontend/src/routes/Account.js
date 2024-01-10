@@ -6,6 +6,7 @@ export default function Account() {
     <div>
       <Navbar />
       <h1>Welcome to Account </h1>
+
       <AddCollege />
     </div>
   );
