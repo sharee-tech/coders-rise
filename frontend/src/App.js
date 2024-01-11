@@ -14,6 +14,7 @@ import Favorites from "./routes/Favorites";
 import Search from "./routes/Search";
 import EventBus from "./common/EventBus";
 import Edit from "./routes/Edit";
+import Contact from "./routes/Contact";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -117,7 +118,8 @@ function App() {
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/search" element={<Search />} />
-            {/* <Route path="/contact-us" element={<ContactUs />} /> */}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="favorites" element={<Favorites />} />
             <Route path="favorites" element={<Favorites />} />
             <Route path="favorites/:id" element={<Edit />} />
             <Route path="*" element={<h1>Route does not exist</h1>} />

@@ -19,37 +19,22 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/search">
+              <a className="nav-link" aria-current="page" href="/search">
                 Search
               </a>
             </li>
             <li className="nav-item">
-
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/favorites"
-              >
+              <a className="nav-link" aria-current="page" href="/favorites">
                 Favorites
               </a>
             </li>
             <li className="nav-item">
-
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/account"
-              >
+              <a className="nav-link" aria-current="page" href="/account">
                 Account
               </a>
             </li>
             <li className="nav-item">
-
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/contact"
-              >
+              <a className="nav-link" aria-current="page" href="/contact">
                 Contact
               </a>
             </li>
