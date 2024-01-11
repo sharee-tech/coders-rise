@@ -97,13 +97,6 @@ export default function Form() {
       ? `&latest.programs.cip_4_digit.code=${degreeProgramChosen}`
       : "";
 
-  // console.log(favorites);
-  // console.log(results);
-  // console.log(degreePrograms[2].title);
-  // console.log(degreePrograms[2].code);
-  // console.log(degreeProgramChosen);
-  // console.log(baseUrl);
-
   const apiCall =
     baseUrl +
     fieldsDefault +
