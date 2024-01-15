@@ -114,7 +114,11 @@ export default function Form() {
           // clear existing checked colleges
           setFavorites([]);
           axios.get(apiCall).then((res) => {
-            setResults(res.data["results"]);
+            //call to API and setting results, sending alert if no results are found
+            if(res.data["results"].length == 0) {
+              alert("There are no results for this search!")
+            } else
+            setResults(res.data["results"]);  
           });
         }}
       >
