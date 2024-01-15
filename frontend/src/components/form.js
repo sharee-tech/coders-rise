@@ -35,12 +35,9 @@ export default function Form() {
       event.target.checked = false;
     } catch (e) {
       var updatedList = [...favorites];
-      //looks for checked value in existing array
       if (event.target.checked) {
-        //add value if it is checked
         updatedList = [...favorites, event.target.value];
       } else {
-          //moves to next index of the favorites
         updatedList.splice(favorites.indexOf(event.target.value), 1);
       }
       setFavorites(updatedList);
