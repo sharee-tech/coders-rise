@@ -5,7 +5,7 @@ export default function ContactForm() {
         e.preventDefault();
       }}
     >
-      <div class="form-group">
+      <div class=" mb-3 form-group">
         <label for="fName">First Name</label>
         <input
           type="text"
@@ -15,7 +15,7 @@ export default function ContactForm() {
         ></input>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3 form-group">
         <label for="lName">Last Name</label>
         <input
           type="text"
@@ -25,7 +25,7 @@ export default function ContactForm() {
         ></input>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3 form-group">
         <label for="emailAdd">Email</label>
         <input
           type="email"
@@ -35,7 +35,7 @@ export default function ContactForm() {
         ></input>
       </div>
 
-      <div class="form-group">
+      <div class="mb-3 form-group">
         <label for="contactMessage">Leave your message here</label>
         <textarea class="form-control" id="contactMessage" rows="3"></textarea>
       </div>
