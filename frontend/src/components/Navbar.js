@@ -10,7 +10,7 @@ export default function Navbar({ logout, user }) {
 
         {user ? (
           <>
-            <div class="navbar-nav">
+            <div className="navbar-nav">
               <li className="nav-item">
                 <NavLink
                   to="/search"
@@ -39,8 +39,8 @@ export default function Navbar({ logout, user }) {
                 </NavLink>
               </li>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ms-auto">
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <NavLink
                     to="/profile"
@@ -65,7 +65,7 @@ export default function Navbar({ logout, user }) {
           </>
         ) : (
           <>
-            <div class="navbar-nav">
+            <div className="navbar-nav">
               <li className="nav-item">
                 <NavLink
                   to="/register"
@@ -85,8 +85,8 @@ export default function Navbar({ logout, user }) {
                 </NavLink>
               </li>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ms-auto">
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav ms-auto">
                 <li className="nav-item">
                   <NavLink
                     to="/login"
