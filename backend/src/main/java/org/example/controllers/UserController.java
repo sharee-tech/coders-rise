@@ -35,7 +35,7 @@ public class UserController {
             _user.setPassword(encoder.encode(user.getPassword()));
             _user.setUsername(user.getUsername());
 
-//            
+//
 //            update localstorage to have new user coming from response body
 //            append to object, only key/value pairs that have modified data
 

@@ -14,7 +14,7 @@ export default function Navbar({ logout, user }) {
               <li className="nav-item">
                 <NavLink
                   to="/search"
-                  activeClassName="active"
+                  activeclassname="active"
                   className="nav-link"
                 >
                   Search
@@ -23,7 +23,7 @@ export default function Navbar({ logout, user }) {
               <li className="nav-item">
                 <NavLink
                   to="/favorites"
-                  activeClassName="active"
+                  activeclassname="active"
                   className="nav-link"
                 >
                   Favorites
@@ -32,7 +32,7 @@ export default function Navbar({ logout, user }) {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/contact"
                 >
                   Contact Us
@@ -44,7 +44,7 @@ export default function Navbar({ logout, user }) {
                 <li className="nav-item">
                   <NavLink
                     to="/profile"
-                    activeClassName="active"
+                    activeclassname="active"
                     className="nav-link"
                   >
                     {user.username}
@@ -53,7 +53,7 @@ export default function Navbar({ logout, user }) {
                 <li className="nav-item">
                   <NavLink
                     to="/login"
-                    activeClassName="active"
+                    activeclassname="active"
                     className="nav-link"
                     onClick={logout}
                   >
@@ -69,7 +69,7 @@ export default function Navbar({ logout, user }) {
               <li className="nav-item">
                 <NavLink
                   to="/register"
-                  activeClassName="active"
+                  activeclassname="active"
                   className="nav-link"
                 >
                   Signup
@@ -78,7 +78,7 @@ export default function Navbar({ logout, user }) {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/contact"
                 >
                   Contact Us
@@ -90,7 +90,7 @@ export default function Navbar({ logout, user }) {
                 <li className="nav-item">
                   <NavLink
                     to="/login"
-                    activeClassName="active"
+                    activeclassname="active"
                     className="nav-link"
                   >
                     Login

@@ -9,12 +9,14 @@ const ProfilePractice = ({ userId }) => {
   // const currentUser = AuthService.getCurrentUser();
   const navigate = useNavigate();
   // get user/userid from context
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   // State variables for EditFavorite component
   const [username, setUsername] = useState(currentUser.username);
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState(currentUser.email);
 
+  let tempUser = localStorage.getItem("user");
+  console.log("Temp User: ", tempUser);
   return (
     <div className="container">
       <form
@@ -28,26 +30,20 @@ const ProfilePractice = ({ userId }) => {
             password: password,
             username: username,
           };
-          // CollegeDataService.updateUser(currentUser.id, dataForDb).then(
-          //   (res) => {
-          //     if (res.data.accessToken) {
-          //       localStorage.setItem("user", JSON.stringify(res.data));
-          //     }
-          //     navigate("/account"); // reload page
-          //   }
-          //   //SHOULD PROBABLY CONSIDER HANDLING ERROR CONDITION?
-          // );
 
           CollegeDataService.updateUser(currentUser.id, dataForDb)
             .then((res) => {
-              // console.log("response: ", res);
+              let parsedTempUser = JSON.parse(tempUser);
+              let newTempUser = {
+                email: email,
+                username: username,
+              };
+              console.log(newTempUser);
+              let result = { ...parsedTempUser, ...newTempUser };
 
-              // Update local storage only after a successful update
-              localStorage.setItem("user", JSON.stringify(res.data));
-              // console.log(
-              //   "Local storage updated:",
-              //   localStorage.getItem("user")
-              // );
+              let jsonResult = JSON.stringify(result);
+              console.log(jsonResult);
+              localStorage.setItem("user", jsonResult);
 
               navigate("/account"); // reload page
             })

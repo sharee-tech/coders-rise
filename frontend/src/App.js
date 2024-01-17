@@ -18,6 +18,7 @@ import Contact from "./routes/Contact";
 import Navbar from "./components/Navbar";
 import Account from "./routes/Account";
 import ProfilePractice from "./components/ProfilePractice";
+import ThankYou from "./components/ThankYou";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -48,7 +49,7 @@ function App() {
     <div>
       <Navbar logout={logOut} user={currentUser} />
       <>
-        <UserContext.Provider value={{ currentUser }}>
+        <UserContext.Provider value={{ currentUser, setCurrentUser }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -62,6 +63,7 @@ function App() {
             <Route path="favorites/:id" element={<Edit />} />
             <Route path="*" element={<h1>Route does not exist</h1>} />
             <Route path="account" element={<Account />} />
+            <Route path="thankYou" element={<ThankYou />} />
           </Routes>
         </UserContext.Provider>
       </>
