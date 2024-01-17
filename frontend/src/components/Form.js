@@ -7,8 +7,6 @@ import CollegeService from "../services/CollegeService";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../UserContext";
 
-// const userId = null;
-
 export default function Form() {
   const navigate = useNavigate();
   const [degreeType, setDegreeType] = useState(0);
@@ -19,15 +17,15 @@ export default function Form() {
   const [degreeProgramChosen, setDegreeProgramChosen] = useState("");
   const [favorites, setFavorites] = useState([]);
   const [selectedSchool, setSelectedSchool] = useState(null);
-  const [articles, setArticles] = useState([]);
-  const [loadingArticles, setLoadingArticles] = useState(false);
+  // const [articles, setArticles] = useState([]);
+  // const [loadingArticles, setLoadingArticles] = useState(false);
 
   const modalRef = useRef();
 
-  const closeModal = () => {
-    setSelectedSchool(null);
-    modalRef.current.close();
-  };
+  // const closeModal = () => {
+  //   setSelectedSchool(null);
+  //   modalRef.current.close();
+  // };
 
   // get user/userid from context
   const { currentUser } = useContext(UserContext);
@@ -118,7 +116,6 @@ export default function Form() {
     degreeProgramChosenParam;
 
   const openModal = (school) => {
-    // alert("hit");
     setSelectedSchool(school);
     modalRef.current && modalRef.current.showModal();
   };
@@ -131,31 +128,11 @@ export default function Form() {
           // clear existing checked colleges
           setFavorites([]);
           axios.get(apiCall).then((res) => {
-            // call to API and setting results, sending alert if no results are found
-            if (res.data["results"].length === 0) {
+            //call to API and setting results, sending alert if no results are found
+            if (res.data["results"].length == 0) {
               alert("There are no results for this search!");
-            } else {
-              const sortedResults = res.data["results"].sort((a, b) =>
-                compareAdmissionRates(a, b)
-              );
-              setResults(sortedResults);
-            }
+            } else setResults(res.data["results"]);
           });
-
-          const compareAdmissionRates = (schoolA, schoolB) => {
-            const admissionRateA =
-              schoolA["latest.admissions.admission_rate.overall"];
-            const admissionRateB =
-              schoolB["latest.admissions.admission_rate.overall"];
-
-            // Handle cases where admission rates are null or undefined
-            if (admissionRateA === null && admissionRateB === null) return 0;
-            if (admissionRateA === null) return 1;
-            if (admissionRateB === null) return -1;
-
-            // Compare admission rates
-            return admissionRateB - admissionRateA;
-          };
         }}
       >
         <div className="mb-3">
@@ -255,11 +232,7 @@ export default function Form() {
             </button>
           </>
         )}
-        <p>
-          <h10 className="mt-3 lead">
-            Colleges are sorted by the highest acceptance rate to the lowest
-          </h10>
-        </p>
+
         <table className="table">
           <thead>
             <tr>
