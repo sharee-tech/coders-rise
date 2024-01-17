@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useRef } from "react";
+import { useState, useContext } from "react";
 import React from "react";
 import states from "../states";
 import axios from "axios";
@@ -6,6 +6,11 @@ import cip_4_digit from "../cip_4_digit.json";
 import CollegeService from "../services/CollegeService";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../UserContext";
+import authHeader from "../services/auth-header";
+import { useRef } from "react";
+import { useEffect } from "react";
+import eventBus from "../common/EventBus";
+import AuthService from "../services/auth.service";
 
 // const userId = null;
 
@@ -29,8 +34,11 @@ export default function Form() {
     modalRef.current.close();
   };
 
-  // get user/userid from context
   const { currentUser } = useContext(UserContext);
+
+  const axiosWithAuth = axios.create({
+    headers: authHeader(),
+  });
 
   // updated handleCheck to not allow for duplicate entry in favorites list
   const handleCheck = async function(event) {
@@ -118,7 +126,6 @@ export default function Form() {
     degreeProgramChosenParam;
 
   const openModal = (school) => {
-    // alert("hit");
     setSelectedSchool(school);
     modalRef.current && modalRef.current.showModal();
   };

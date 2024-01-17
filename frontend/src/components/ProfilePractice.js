@@ -16,20 +16,25 @@ const ProfilePractice = ({ userId }) => {
   const [email, setEmail] = useState(currentUser.email);
 
   let tempUser = localStorage.getItem("user");
-  console.log("Temp User: ", tempUser);
+
   return (
     <div className="container">
       <form
         onSubmit={(e) => {
           e.preventDefault();
           // axios call to write to MySQL database table
-          console.log("hit submit");
 
-          const dataForDb = {
-            email: email,
-            password: password,
-            username: username,
-          };
+          const dataForDb = {};
+
+          if (email !== "") {
+            dataForDb["email"] = email;
+          }
+          if (password !== "") {
+            dataForDb["password"] = password;
+          }
+          if (username !== "") {
+            dataForDb["username"] = username;
+          }
 
           CollegeDataService.updateUser(currentUser.id, dataForDb)
             .then((res) => {
@@ -38,14 +43,15 @@ const ProfilePractice = ({ userId }) => {
                 email: email,
                 username: username,
               };
-              console.log(newTempUser);
-              let result = { ...parsedTempUser, ...newTempUser };
 
+              let result = { ...parsedTempUser, ...newTempUser };
               let jsonResult = JSON.stringify(result);
               console.log(jsonResult);
               localStorage.setItem("user", jsonResult);
-
-              navigate("/account"); // reload page
+              setCurrentUser(result);
+              setPassword("");
+              alert("User data updated!");
+              // navigate("/account"); // reload page
             })
             .catch((error) => {
               // Handle error condition
