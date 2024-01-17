@@ -68,6 +68,15 @@ export default function Navbar({ logout, user }) {
             <div className="navbar-nav">
               <li className="nav-item">
                 <NavLink
+                  to="/search"
+                  activeclassname="active"
+                  className="nav-link"
+                >
+                  Search
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
                   to="/register"
                   activeclassname="active"
                   className="nav-link"

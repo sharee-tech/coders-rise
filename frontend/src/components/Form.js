@@ -248,7 +248,7 @@ export default function Form() {
             </p>
             <button
               type="submit"
-              className="btn btn-success"
+              className="mb-5 btn btn-success"
               onClick={handleRedirectRegister}
             >
               Signup to Save Favorites
