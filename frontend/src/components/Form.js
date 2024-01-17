@@ -17,8 +17,6 @@ export default function Form() {
   const [degreeProgramChosen, setDegreeProgramChosen] = useState("");
   const [favorites, setFavorites] = useState([]);
   const [selectedSchool, setSelectedSchool] = useState(null);
-  // const [articles, setArticles] = useState([]);
-  // const [loadingArticles, setLoadingArticles] = useState(false);
 
   const modalRef = useRef();
 
@@ -116,6 +114,7 @@ export default function Form() {
     degreeProgramChosenParam;
 
   const openModal = (school) => {
+    alert("hit");
     setSelectedSchool(school);
     modalRef.current && modalRef.current.showModal();
   };
@@ -287,16 +286,18 @@ export default function Form() {
         {selectedSchool && (
           <dialog id="modal" ref={modalRef} fixed>
             <div className="col">
-              <div className="card mt-5 h-100">
-                {/* added */}
-                <div className="mt-3">
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => modalRef.current.close()}
-                  >
-                    Close
-                  </button>
+              <div className="d-flex justify-content-end">
+                <div
+                  // className="w-12 h-12 inline-block text-4xl relative rounded text-center hover:bg-grey-lighter p1883"
+                  className="rounded float-right mt-3 me-3"
+                  onClick={() => modalRef.current.close()}
+                  style={{ cursor: "pointer" }}
+                >
+                  X
                 </div>
+              </div>
+              <div className="card mt-5 h-100">
+                <div className="mt-3"></div>
                 <div className="card-body">
                   <h5 className="card-title">
                     {selectedSchool["school.name"]}
@@ -305,7 +306,6 @@ export default function Form() {
                   <hr></hr>
                   <div className="row">
                     <div className="col-md-6">
-                      {/* added */}
                       <div className="mt-3"></div>
                       <p className="card-text">
                         Student Body Size:<br></br>
@@ -326,7 +326,6 @@ export default function Form() {
                           : "$" +
                             selectedSchool["latest.cost.tuition.out_of_state"]}
                       </p>
-                      {/* adding close up here */}
                       <div className="mt-3">
                         <a
                           href={
@@ -343,7 +342,6 @@ export default function Form() {
                       </div>
                     </div>
                     <div className="col-md-6">
-                      {/* adding close up here */}
                       <div className="mt-3">
                         <p className="card-text">
                           Admission Rate:<br></br>
@@ -428,7 +426,6 @@ export default function Form() {
                           )}
                         </p>
                       </div>
-                      {/* removed */}
                     </div>
                   </div>
                 </div>
