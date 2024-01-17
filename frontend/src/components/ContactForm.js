@@ -61,7 +61,7 @@ const ContactForm = () => {
           id="username"
           value={formData.username}
           onChange={handleChange}
-          required
+          // required
         />
       </div>
       <div className="mb-3">
