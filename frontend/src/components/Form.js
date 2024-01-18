@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useRef } from "react";
+import { useState, useContext, useRef } from "react";
 import React from "react";
 import states from "../states";
 import axios from "axios";
@@ -114,7 +114,6 @@ export default function Form() {
     degreeProgramChosenParam;
 
   const openModal = (school) => {
-    alert("hit");
     setSelectedSchool(school);
     modalRef.current && modalRef.current.showModal();
   };
@@ -130,8 +129,9 @@ export default function Form() {
             //call to API and setting results, sending alert if no results are found
             if (res.data["results"].length == 0) {
               alert("There are no results for this search!");
+            } else {
+              setResults(res.data["results"]);
             }
-            setResults(res.data["results"]);
           });
         }}
       >
@@ -157,7 +157,7 @@ export default function Form() {
             value= {degreeProgramChosen}
             <option>Select a degree program</option>
             {degreePrograms.map((degree, index) => (
-              <option value={degree.code} key={index}>
+              <option value={degree.code} key={degree.code}>
                 {degreePrograms[index].title}
               </option>
             ))}
@@ -173,7 +173,7 @@ export default function Form() {
             value= {stateName}
             <option>Select a state</option>
             {states.map((state, index) => (
-              <option value={state} key={index}>
+              <option value={state} key={state}>
                 {state}
               </option>
             ))}
