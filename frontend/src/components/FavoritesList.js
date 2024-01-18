@@ -1,9 +1,9 @@
-
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import CollegeDataService from "../services/CollegeService";
 import CollegeCard from "./CollegeCard";
 import Favorite from "./Favorite";
+import UserContext from "../UserContext";
 
 export default function FavoritesList() {
   // state variables
@@ -12,22 +12,22 @@ export default function FavoritesList() {
   const [dataFromMySQL, setdataFromMySQL] = useState([]);
   const [dataFromCSC, setDataFromCSC] = useState([]);
   const [mergedData, setMergedData] = useState([]);
-
-  // local variable
-  const userId = 152;
+  // get user/userid from context
+  const { currentUser } = useContext(UserContext);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await CollegeDataService.getAll(userId);
+        const response = await CollegeDataService.getAll(currentUser.id);
         setdataFromMySQL(response.data);
       } catch (error) {
         console.error("Error fetching data", error);
       }
     };
-
-    fetchData();
-  }, []);
+    if (currentUser) {
+      fetchData();
+    }
+  }, [currentUser]);
 
   useEffect(() => {
     const fetchDataFromCSC = async () => {
@@ -35,7 +35,7 @@ export default function FavoritesList() {
       //we need an array of collegeIds to iterate over and we run an api call to CollegeBoard for each collegeId which is why we are doing axios.all
       dataFromMySQL.map((college) =>
         endpoints.push(
-          `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&id=${college.collegeId}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,school.school_url`
+          `https://api.data.gov/ed/collegescorecard/v1/schools.json?api_key=${process.env.REACT_APP_API_KEY}&id=${college.collegeId}&fields=school.name,school.city,school.state,latest.student.size,latest.cost.tuition.in_state,latest.cost.tuition.out_of_state,school.degrees_awarded.highest,id,school.school_url,latest.admissions.admission_rate.overall,latest.admissions.sat_scores.average.overall,latest.admissions.act_scores.midpoint.cumulative`
         )
       );
       try {
@@ -75,12 +75,12 @@ export default function FavoritesList() {
   return (
     <>
       {!dataFromCSC.length > 0 ? (
-        <div class="d-flex align-items-center">
+        <div className="d-flex align-items-center">
           <strong role="status">Loading...</strong>
-          <div class="spinner-border ms-auto" aria-hidden="true"></div>
+          <div className="spinner-border ms-auto" aria-hidden="true"></div>
         </div>
       ) : (
-        <div className="container">
+        <>
           <table className="table table-borderless">
             <thead>
               <tr>
@@ -110,7 +110,7 @@ export default function FavoritesList() {
               <CollegeCard details={college} key={college.id} />
             ))}
           </div>
-        </div>
+        </>
       )}
     </>
   );

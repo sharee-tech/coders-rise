@@ -23,7 +23,18 @@ export default function CollegeCard({ details }) {
               : "$" + details["latest.cost.tuition.out_of_state"]}
           </p>
           <p className="card-text">
-            Degree programs offered: <h6></h6>
+            Admission Rate:<br></br>
+            {Math.round(
+              details["latest.admissions.admission_rate.overall"] * 100
+            ) + "%"}
+          </p>
+          <p className="card-text">
+            Average SAT Score:<br></br>
+            {details["latest.admissions.sat_scores.average.overall"]}
+          </p>
+          <p className="card-text">
+            Average ACT Score:<br></br>
+            {details["latest.admissions.act_scores.midpoint.cumulative"]}
           </p>
         </div>
         <div className="card-footer">
@@ -39,7 +50,6 @@ export default function CollegeCard({ details }) {
           >
             Visit
           </a>
-          {/* <small className="text-muted">Last updated 3 mins ago</small> */}
         </div>
       </div>
     </div>

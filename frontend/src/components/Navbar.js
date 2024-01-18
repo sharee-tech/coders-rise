@@ -1,60 +1,114 @@
-export default function Navbar() {
+import { NavLink } from "react-router-dom";
+
+export default function Navbar({ logout, user }) {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to="/">
           College EP
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
-          <ul className="navbar-nav me-auto mb-2 mb-md-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/search">
-                Search
-              </a>
-            </li>
-            <li className="nav-item">
+        </NavLink>
 
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/favorites"
-              >
-                Favorites
-              </a>
-            </li>
-            <li className="nav-item">
-
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/account"
-              >
-                Account
-              </a>
-            </li>
-            <li className="nav-item">
-
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/contact"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+        {user ? (
+          <>
+            <div className="navbar-nav">
+              <li className="nav-item">
+                <NavLink
+                  to="/search"
+                  activeclassname="active"
+                  className="nav-link"
+                >
+                  Search
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/favorites"
+                  activeclassname="active"
+                  className="nav-link"
+                >
+                  Favorites
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/contact"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+            </div>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <NavLink
+                    to="/profile"
+                    activeclassname="active"
+                    className="nav-link"
+                  >
+                    {user.username}
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to="/login"
+                    activeclassname="active"
+                    className="nav-link"
+                    onClick={logout}
+                  >
+                    Logout
+                  </NavLink>
+                </li>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="navbar-nav">
+              <li className="nav-item">
+                <NavLink
+                  to="/search"
+                  activeclassname="active"
+                  className="nav-link"
+                >
+                  Search
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/register"
+                  activeclassname="active"
+                  className="nav-link"
+                >
+                  Signup
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/contact"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+            </div>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <NavLink
+                    to="/login"
+                    activeclassname="active"
+                    className="nav-link"
+                  >
+                    Login
+                  </NavLink>
+                </li>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </nav>
   );

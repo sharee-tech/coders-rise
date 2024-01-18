@@ -1,1869 +1,1866 @@
 [
   {
     "code": "0100",
-    "title": "Agriculture, General."
+    "title": "Agriculture, General"
   },
   {
     "code": "0101",
-    "title": "Agricultural Business and Management."
+    "title": "Agricultural Business and Management"
   },
   {
     "code": "0102",
-    "title": "Agricultural Mechanization."
+    "title": "Agricultural Mechanization"
   },
   {
     "code": "0103",
-    "title": "Agricultural Production Operations."
+    "title": "Agricultural Production Operations"
   },
   {
     "code": "0104",
-    "title": "Agricultural and Food Products Processing."
+    "title": "Agricultural and Food Products Processing"
   },
   {
     "code": "0105",
-    "title": "Agricultural and Domestic Animal Services."
+    "title": "Agricultural and Domestic Animal Services"
   },
   {
     "code": "0106",
-    "title": "Applied Horticulture and Horticultural Business Services."
+    "title": "Applied Horticulture and Horticultural Business Services"
   },
   {
     "code": "0107",
-    "title": "International Agriculture."
+    "title": "International Agriculture"
   },
   {
     "code": "0108",
-    "title": "Agricultural Public Services."
+    "title": "Agricultural Public Services"
   },
   {
     "code": "0109",
-    "title": "Animal Sciences."
+    "title": "Animal Sciences"
   },
   {
     "code": "0110",
-    "title": "Food Science and Technology."
+    "title": "Food Science and Technology"
   },
   {
     "code": "0111",
-    "title": "Plant Sciences."
+    "title": "Plant Sciences"
   },
   {
     "code": "0112",
-    "title": "Soil Sciences."
+    "title": "Soil Sciences"
   },
   {
     "code": "0113",
-    "title": "Agriculture/Veterinary Preparatory Programs."
+    "title": "Agriculture/Veterinary Preparatory Programs"
   },
   {
     "code": "0180",
-    "title": "Veterinary Medicine."
+    "title": "Veterinary Medicine"
   },
   {
     "code": "0181",
-    "title": "Veterinary Biomedical and Clinical Sciences."
+    "title": "Veterinary Biomedical and Clinical Sciences"
   },
   {
     "code": "0182",
-    "title": "Veterinary Administrative Services."
+    "title": "Veterinary Administrative Services"
   },
   {
     "code": "0183",
-    "title": "Veterinary/Animal Health Technologies/Technicians."
+    "title": "Veterinary/Animal Health Technologies/Technicians"
   },
   {
     "code": "0199",
-    "title": "Agricultural/Animal/Plant/Veterinary Science and Related Fields, Other."
+    "title": "Agricultural/Animal/Plant/Veterinary Science and Related Fields, Other"
   },
   {
     "code": "0301",
-    "title": "Natural Resources Conservation and Research."
+    "title": "Natural Resources Conservation and Research"
   },
   {
     "code": "0302",
-    "title": "Environmental/Natural Resources Management and Policy."
+    "title": "Environmental/Natural Resources Management and Policy"
   },
   {
     "code": "0303",
-    "title": "Fishing and Fisheries Sciences and Management."
+    "title": "Fishing and Fisheries Sciences and Management"
   },
   {
     "code": "0305",
-    "title": "Forestry."
+    "title": "Forestry"
   },
   {
     "code": "0306",
-    "title": "Wildlife and Wildlands Science and Management."
+    "title": "Wildlife and Wildlands Science and Management"
   },
   {
     "code": "0399",
-    "title": "Natural Resources and Conservation, Other."
+    "title": "Natural Resources and Conservation, Other"
   },
   {
     "code": "0402",
-    "title": "Architecture."
+    "title": "Architecture"
   },
   {
     "code": "0403",
-    "title": "City/Urban, Community, and Regional Planning."
+    "title": "City/Urban, Community, and Regional Planning"
   },
   {
     "code": "0404",
-    "title": "Environmental Design."
+    "title": "Environmental Design"
   },
   {
     "code": "0405",
-    "title": "Interior Architecture."
+    "title": "Interior Architecture"
   },
   {
     "code": "0406",
-    "title": "Landscape Architecture."
+    "title": "Landscape Architecture"
   },
   {
     "code": "0408",
-    "title": "Architectural History, Criticism, and Conservation."
+    "title": "Architectural History, Criticism, and Conservation"
   },
   {
     "code": "0409",
-    "title": "Architectural Sciences and Technology."
+    "title": "Architectural Sciences and Technology"
   },
   {
     "code": "0410",
-    "title": "Real Estate Development."
+    "title": "Real Estate Development"
   },
   {
     "code": "0499",
-    "title": "Architecture and Related Services, Other."
+    "title": "Architecture and Related Services, Other"
   },
   {
     "code": "0501",
-    "title": "Area Studies."
+    "title": "Area Studies"
   },
   {
     "code": "0502",
-    "title": "Ethnic, Cultural Minority, Gender, and Group Studies."
+    "title": "Ethnic, Cultural Minority, Gender, and Group Studies"
   },
   {
     "code": "0599",
-    "title": "Area, Ethnic, Cultural, Gender, and Group Studies, Other."
+    "title": "Area, Ethnic, Cultural, Gender, and Group Studies, Other"
   },
   {
     "code": "0901",
-    "title": "Communication and Media Studies."
+    "title": "Communication and Media Studies"
   },
   {
     "code": "0904",
-    "title": "Journalism."
+    "title": "Journalism"
   },
   {
     "code": "0907",
-    "title": "Radio, Television, and Digital Communication."
+    "title": "Radio, Television, and Digital Communication"
   },
   {
     "code": "0909",
-    "title": "Public Relations, Advertising, and Applied Communication."
+    "title": "Public Relations, Advertising, and Applied Communication"
   },
   {
     "code": "0910",
-    "title": "Publishing."
+    "title": "Publishing"
   },
   {
     "code": "0999",
-    "title": "Communication, Journalism, and Related Programs, Other."
+    "title": "Communication, Journalism, and Related Programs, Other"
   },
   {
     "code": "1001",
-    "title": "Communications Technologies/Technicians."
+    "title": "Communications Technologies/Technicians"
   },
   {
     "code": "1002",
-    "title": "Audiovisual Communications Technologies/Technicians."
+    "title": "Audiovisual Communications Technologies/Technicians"
   },
   {
     "code": "1003",
-    "title": "Graphic Communications."
+    "title": "Graphic Communications"
   },
   {
     "code": "1099",
-    "title": "Communications Technologies/Technicians and Support Services, Other."
+    "title": "Communications Technologies/Technicians and Support Services, Other"
   },
   {
     "code": "1101",
-    "title": "Computer and Information Sciences, General."
+    "title": "Computer and Information Sciences, General"
   },
   {
     "code": "1102",
-    "title": "Computer Programming."
+    "title": "Computer Programming"
   },
   {
     "code": "1103",
-    "title": "Data Processing."
+    "title": "Data Processing"
   },
   {
     "code": "1104",
-    "title": "Information Science/Studies."
+    "title": "Information Science/Studies"
   },
   {
     "code": "1105",
-    "title": "Computer Systems Analysis."
+    "title": "Computer Systems Analysis"
   },
   {
     "code": "1106",
-    "title": "Data Entry/Microcomputer Applications."
+    "title": "Data Entry/Microcomputer Applications"
   },
   {
     "code": "1107",
-    "title": "Computer Science."
+    "title": "Computer Science"
   },
   {
     "code": "1108",
-    "title": "Computer Software and Media Applications."
+    "title": "Computer Software and Media Applications"
   },
   {
     "code": "1109",
-    "title": "Computer Systems Networking and Telecommunications."
+    "title": "Computer Systems Networking and Telecommunications"
   },
   {
     "code": "1110",
-    "title": "Computer/Information Technology Administration and Management."
+    "title": "Computer/Information Technology Administration and Management"
   },
   {
     "code": "1199",
-    "title": "Computer and Information Sciences and Support Services, Other."
+    "title": "Computer and Information Sciences and Support Services, Other"
   },
   {
     "code": "1203",
-    "title": "Funeral Service and Mortuary Science."
+    "title": "Funeral Service and Mortuary Science"
   },
   {
     "code": "1204",
-    "title": "Cosmetology and Related Personal Grooming Services."
+    "title": "Cosmetology and Related Personal Grooming Services"
   },
   {
     "code": "1205",
-    "title": "Culinary Arts and Related Services."
+    "title": "Culinary Arts and Related Services"
   },
   {
     "code": "1206",
-    "title": "Casino Operations and Services."
+    "title": "Casino Operations and Services"
   },
   {
     "code": "1299",
-    "title": "Culinary, Entertainment, and Personal Services, Other."
+    "title": "Culinary, Entertainment, and Personal Services, Other"
   },
   {
     "code": "1301",
-    "title": "Education, General."
+    "title": "Education, General"
   },
   {
     "code": "1302",
-    "title": "Bilingual, Multilingual, and Multicultural Education."
+    "title": "Bilingual, Multilingual, and Multicultural Education"
   },
   {
     "code": "1303",
-    "title": "Curriculum and Instruction."
+    "title": "Curriculum and Instruction"
   },
   {
     "code": "1304",
-    "title": "Educational Administration and Supervision."
+    "title": "Educational Administration and Supervision"
   },
   {
     "code": "1305",
-    "title": "Educational/Instructional Media Design."
+    "title": "Educational/Instructional Media Design"
   },
   {
     "code": "1306",
-    "title": "Educational Assessment, Evaluation, and Research."
+    "title": "Educational Assessment, Evaluation, and Research"
   },
   {
     "code": "1307",
-    "title": "International and Comparative Education."
+    "title": "International and Comparative Education"
   },
   {
     "code": "1309",
-    "title": "Social and Philosophical Foundations of Education."
+    "title": "Social and Philosophical Foundations of Education"
   },
   {
     "code": "1310",
-    "title": "Special Education and Teaching."
+    "title": "Special Education and Teaching"
   },
   {
     "code": "1311",
-    "title": "Student Counseling and Personnel Services."
+    "title": "Student Counseling and Personnel Services"
   },
   {
     "code": "1312",
-    "title": "Teacher Education and Professional Development, Specific Levels and Methods."
+    "title": "Teacher Education and Professional Development, Specific Levels and Methods"
   },
   {
     "code": "1313",
-    "title": "Teacher Education and Professional Development, Specific Subject Areas."
+    "title": "Teacher Education and Professional Development, Specific Subject Areas"
   },
   {
     "code": "1314",
-    "title": "Teaching English or French as a Second or Foreign Language."
+    "title": "Teaching English or French as a Second or Foreign Language"
   },
   {
     "code": "1315",
-    "title": "Teaching Assistants/Aides."
+    "title": "Teaching Assistants/Aides"
   },
   {
     "code": "1399",
-    "title": "Education, Other."
+    "title": "Education, Other"
   },
   {
     "code": "1401",
-    "title": "Engineering, General."
+    "title": "Engineering, General"
   },
   {
     "code": "1402",
-    "title": "Aerospace, Aeronautical, and Astronautical/Space Engineering."
+    "title": "Aerospace, Aeronautical, and Astronautical/Space Engineering"
   },
   {
     "code": "1403",
-    "title": "Agricultural Engineering."
+    "title": "Agricultural Engineering"
   },
   {
     "code": "1404",
-    "title": "Architectural Engineering."
+    "title": "Architectural Engineering"
   },
   {
     "code": "1405",
-    "title": "Biomedical/Medical Engineering."
+    "title": "Biomedical/Medical Engineering"
   },
   {
     "code": "1406",
-    "title": "Ceramic Sciences and Engineering."
+    "title": "Ceramic Sciences and Engineering"
   },
   {
     "code": "1407",
-    "title": "Chemical Engineering."
+    "title": "Chemical Engineering"
   },
   {
     "code": "1408",
-    "title": "Civil Engineering."
+    "title": "Civil Engineering"
   },
   {
     "code": "1409",
-    "title": "Computer Engineering."
+    "title": "Computer Engineering"
   },
   {
     "code": "1410",
-    "title": "Electrical, Electronics, and Communications Engineering."
+    "title": "Electrical, Electronics, and Communications Engineering"
   },
   {
     "code": "1411",
-    "title": "Engineering Mechanics."
+    "title": "Engineering Mechanics"
   },
   {
     "code": "1412",
-    "title": "Engineering Physics."
+    "title": "Engineering Physics"
   },
   {
     "code": "1413",
-    "title": "Engineering Science."
+    "title": "Engineering Science"
   },
   {
     "code": "1414",
-    "title": "Environmental/Environmental Health Engineering."
+    "title": "Environmental/Environmental Health Engineering"
   },
   {
     "code": "1418",
-    "title": "Materials Engineering."
+    "title": "Materials Engineering"
   },
   {
     "code": "1419",
-    "title": "Mechanical Engineering."
+    "title": "Mechanical Engineering"
   },
   {
     "code": "1420",
-    "title": "Metallurgical Engineering."
+    "title": "Metallurgical Engineering"
   },
   {
     "code": "1421",
-    "title": "Mining and Mineral Engineering."
+    "title": "Mining and Mineral Engineering"
   },
   {
     "code": "1422",
-    "title": "Naval Architecture and Marine Engineering."
+    "title": "Naval Architecture and Marine Engineering"
   },
   {
     "code": "1423",
-    "title": "Nuclear Engineering."
+    "title": "Nuclear Engineering"
   },
   {
     "code": "1424",
-    "title": "Ocean Engineering."
+    "title": "Ocean Engineering"
   },
   {
     "code": "1425",
-    "title": "Petroleum Engineering."
+    "title": "Petroleum Engineering"
   },
   {
     "code": "1427",
-    "title": "Systems Engineering."
+    "title": "Systems Engineering"
   },
   {
     "code": "1428",
-    "title": "Textile Sciences and Engineering."
+    "title": "Textile Sciences and Engineering"
   },
   {
     "code": "1432",
-    "title": "Polymer/Plastics Engineering."
+    "title": "Polymer/Plastics Engineering"
   },
   {
     "code": "1433",
-    "title": "Construction Engineering."
+    "title": "Construction Engineering"
   },
   {
     "code": "1434",
-    "title": "Forest Engineering."
+    "title": "Forest Engineering"
   },
   {
     "code": "1435",
-    "title": "Industrial Engineering."
+    "title": "Industrial Engineering"
   },
   {
     "code": "1436",
-    "title": "Manufacturing Engineering."
+    "title": "Manufacturing Engineering"
   },
   {
     "code": "1437",
-    "title": "Operations Research."
+    "title": "Operations Research"
   },
   {
     "code": "1438",
-    "title": "Surveying Engineering."
+    "title": "Surveying Engineering"
   },
   {
     "code": "1439",
-    "title": "Geological/Geophysical Engineering."
+    "title": "Geological/Geophysical Engineering"
   },
   {
     "code": "1440",
-    "title": "Paper Science and Engineering."
+    "title": "Paper Science and Engineering"
   },
   {
     "code": "1441",
-    "title": "Electromechanical Engineering."
+    "title": "Electromechanical Engineering"
   },
   {
     "code": "1442",
-    "title": "Mechatronics, Robotics, and Automation Engineering."
+    "title": "Mechatronics, Robotics, and Automation Engineering"
   },
   {
     "code": "1443",
-    "title": "Biochemical Engineering."
+    "title": "Biochemical Engineering"
   },
   {
     "code": "1444",
-    "title": "Engineering Chemistry."
+    "title": "Engineering Chemistry"
   },
   {
     "code": "1445",
-    "title": "Biological/Biosystems Engineering."
+    "title": "Biological/Biosystems Engineering"
   },
   {
     "code": "1447",
-    "title": "Electrical and Computer Engineering."
+    "title": "Electrical and Computer Engineering"
   },
   {
     "code": "1448",
-    "title": "Energy Systems Engineering."
+    "title": "Energy Systems Engineering"
   },
   {
     "code": "1499",
-    "title": "Engineering, Other."
+    "title": "Engineering, Other"
   },
   {
     "code": "1500",
-    "title": "Engineering Technologies/Technicians, General."
+    "title": "Engineering Technologies/Technicians, General"
   },
   {
     "code": "1501",
-    "title": "Architectural Engineering Technologies/Technicians."
+    "title": "Architectural Engineering Technologies/Technicians"
   },
   {
     "code": "1502",
-    "title": "Civil Engineering Technologies/Technicians."
+    "title": "Civil Engineering Technologies/Technicians"
   },
   {
     "code": "1503",
-    "title": "Electrical/Electronic Engineering Technologies/Technicians."
+    "title": "Electrical/Electronic Engineering Technologies/Technicians"
   },
   {
     "code": "1504",
-    "title": "Electromechanical Technologies/Technicians."
+    "title": "Electromechanical Technologies/Technicians"
   },
   {
     "code": "1505",
-    "title": "Environmental Control Technologies/Technicians."
+    "title": "Environmental Control Technologies/Technicians"
   },
   {
     "code": "1506",
-    "title": "Industrial Production Technologies/Technicians."
+    "title": "Industrial Production Technologies/Technicians"
   },
   {
     "code": "1507",
-    "title": "Quality Control and Safety Technologies/Technicians."
+    "title": "Quality Control and Safety Technologies/Technicians"
   },
   {
     "code": "1508",
-    "title": "Mechanical Engineering Related Technologies/Technicians."
+    "title": "Mechanical Engineering Related Technologies/Technicians"
   },
   {
     "code": "1509",
-    "title": "Mining and Petroleum Technologies/Technicians."
+    "title": "Mining and Petroleum Technologies/Technicians"
   },
   {
     "code": "1510",
-    "title": "Construction Engineering Technology/Technician."
+    "title": "Construction Engineering Technology/Technician"
   },
   {
     "code": "1511",
-    "title": "Engineering-Related Technologies/Technicians."
+    "title": "Engineering-Related Technologies/Technicians"
   },
   {
     "code": "1512",
-    "title": "Computer Engineering Technologies/Technicians."
+    "title": "Computer Engineering Technologies/Technicians"
   },
   {
     "code": "1513",
-    "title": "Drafting/Design Engineering Technologies/Technicians."
+    "title": "Drafting/Design Engineering Technologies/Technicians"
   },
   {
     "code": "1514",
-    "title": "Nuclear Engineering Technology/Technician."
+    "title": "Nuclear Engineering Technology/Technician"
   },
   {
     "code": "1515",
-    "title": "Engineering-Related Fields."
+    "title": "Engineering-Related Fields"
   },
   {
     "code": "1516",
-    "title": "Nanotechnology."
+    "title": "Nanotechnology"
   },
   {
     "code": "1517",
-    "title": "Energy Systems Technologies/Technicians."
+    "title": "Energy Systems Technologies/Technicians"
   },
   {
     "code": "1599",
-    "title": "Engineering/Engineering-Related Technologies/Technicians, Other."
+    "title": "Engineering/Engineering-Related Technologies/Technicians, Other"
   },
   {
     "code": "1601",
-    "title": "Linguistic, Comparative, and Related Language Studies and Services."
+    "title": "Linguistic, Comparative, and Related Language Studies and Services"
   },
   {
     "code": "1602",
-    "title": "African Languages, Literatures, and Linguistics."
+    "title": "African Languages, Literatures, and Linguistics"
   },
   {
     "code": "1603",
-    "title": "East Asian Languages, Literatures, and Linguistics."
+    "title": "East Asian Languages, Literatures, and Linguistics"
   },
   {
     "code": "1604",
-    "title": "Slavic, Baltic and Albanian Languages, Literatures, and Linguistics."
+    "title": "Slavic, Baltic and Albanian Languages, Literatures, and Linguistics"
   },
   {
     "code": "1605",
-    "title": "Germanic Languages, Literatures, and Linguistics."
+    "title": "Germanic Languages, Literatures, and Linguistics"
   },
   {
     "code": "1606",
-    "title": "Modern Greek Language and Literature."
+    "title": "Modern Greek Language and Literature"
   },
   {
     "code": "1607",
-    "title": "South Asian Languages, Literatures, and Linguistics."
+    "title": "South Asian Languages, Literatures, and Linguistics"
   },
   {
     "code": "1608",
-    "title": "Iranian/Persian Languages, Literatures, and Linguistics."
+    "title": "Iranian/Persian Languages, Literatures, and Linguistics"
   },
   {
     "code": "1609",
-    "title": "Romance Languages, Literatures, and Linguistics."
+    "title": "Romance Languages, Literatures, and Linguistics"
   },
   {
     "code": "1610",
-    "title": "American Indian/Native American Languages, Literatures, and Linguistics."
+    "title": "American Indian/Native American Languages, Literatures, and Linguistics"
   },
   {
     "code": "1611",
-    "title": "Middle/Near Eastern and Semitic Languages, Literatures, and Linguistics."
+    "title": "Middle/Near Eastern and Semitic Languages, Literatures, and Linguistics"
   },
   {
     "code": "1612",
-    "title": "Classics and Classical Languages, Literatures, and Linguistics."
+    "title": "Classics and Classical Languages, Literatures, and Linguistics"
   },
   {
     "code": "1613",
-    "title": "Celtic Languages, Literatures, and Linguistics."
+    "title": "Celtic Languages, Literatures, and Linguistics"
   },
   {
     "code": "1614",
-    "title": "Southeast Asian and Australasian/Pacific Languages, Literatures, and Linguistics."
+    "title": "Southeast Asian and Australasian/Pacific Languages, Literatures, and Linguistics"
   },
   {
     "code": "1615",
-    "title": "Turkic, Uralic-Altaic, Caucasian, and Central Asian Languages, Literatures, and Linguistics."
+    "title": "Turkic, Uralic-Altaic, Caucasian, and Central Asian Languages, Literatures, and Linguistics"
   },
   {
     "code": "1616",
-    "title": "American Sign Language."
+    "title": "American Sign Language"
   },
   {
     "code": "1617",
-    "title": "Second Language Learning."
+    "title": "Second Language Learning"
   },
   {
     "code": "1618",
-    "title": "Armenian Languages, Literatures, and Linguistics."
+    "title": "Armenian Languages, Literatures, and Linguistics"
   },
   {
     "code": "1699",
-    "title": "Foreign Languages, Literatures, and Linguistics, Other."
+    "title": "Foreign Languages, Literatures, and Linguistics, Other"
   },
   {
     "code": "1900",
-    "title": "Work and Family Studies."
+    "title": "Work and Family Studies"
   },
   {
     "code": "1901",
-    "title": "Family and Consumer Sciences/Human Sciences, General."
+    "title": "Family and Consumer Sciences/Human Sciences, General"
   },
   {
     "code": "1902",
-    "title": "Family and Consumer Sciences/Human Sciences Business Services."
+    "title": "Family and Consumer Sciences/Human Sciences Business Services"
   },
   {
     "code": "1904",
-    "title": "Family and Consumer Economics and Related Studies."
+    "title": "Family and Consumer Economics and Related Studies"
   },
   {
     "code": "1905",
-    "title": "Foods, Nutrition, and Related Services."
+    "title": "Foods, Nutrition, and Related Services"
   },
   {
     "code": "1906",
-    "title": "Housing and Human Environments."
+    "title": "Housing and Human Environments"
   },
   {
     "code": "1907",
-    "title": "Human Development, Family Studies, and Related Services."
+    "title": "Human Development, Family Studies, and Related Services"
   },
   {
     "code": "1909",
-    "title": "Apparel and Textiles."
+    "title": "Apparel and Textiles"
   },
   {
     "code": "1910",
-    "title": "Work and Family Studies."
+    "title": "Work and Family Studies"
   },
   {
     "code": "1999",
-    "title": "Family and Consumer Sciences/Human Sciences, Other."
+    "title": "Family and Consumer Sciences/Human Sciences, Other"
   },
   {
     "code": "2200",
-    "title": "Non-Professional Legal Studies."
+    "title": "Non-Professional Legal Studies"
   },
   {
     "code": "2201",
-    "title": "Law."
+    "title": "Law"
   },
   {
     "code": "2202",
-    "title": "Legal Research and Advanced Professional Studies."
+    "title": "Legal Research and Advanced Professional Studies"
   },
   {
     "code": "2203",
-    "title": "Legal Support Services."
+    "title": "Legal Support Services"
   },
   {
     "code": "2299",
-    "title": "Legal Professions and Studies, Other."
+    "title": "Legal Professions and Studies, Other"
   },
   {
     "code": "2301",
-    "title": "English Language and Literature, General."
+    "title": "English Language and Literature, General"
   },
   {
     "code": "2313",
-    "title": "Rhetoric and Composition/Writing Studies."
+    "title": "Rhetoric and Composition/Writing Studies"
   },
   {
     "code": "2314",
-    "title": "Literature."
+    "title": "Literature"
   },
   {
     "code": "2399",
-    "title": "English Language and Literature/Letters, Other."
+    "title": "English Language and Literature/Letters, Other"
   },
   {
     "code": "2401",
-    "title": "Liberal Arts and Sciences, General Studies and Humanities."
+    "title": "Liberal Arts and Sciences, General Studies and Humanities"
   },
   {
     "code": "2501",
-    "title": "Library Science and Administration."
+    "title": "Library Science and Administration"
   },
   {
     "code": "2503",
-    "title": "Library and Archives Assisting."
+    "title": "Library and Archives Assisting"
   },
   {
     "code": "2599",
-    "title": "Library Science, Other."
+    "title": "Library Science, Other"
   },
   {
     "code": "2601",
-    "title": "Biology, General."
+    "title": "Biology, General"
   },
   {
     "code": "2602",
-    "title": "Biochemistry, Biophysics and Molecular Biology."
+    "title": "Biochemistry, Biophysics and Molecular Biology"
   },
   {
     "code": "2603",
-    "title": "Botany/Plant Biology."
+    "title": "Botany/Plant Biology"
   },
   {
     "code": "2604",
-    "title": "Cell/Cellular Biology and Anatomical Sciences."
+    "title": "Cell/Cellular Biology and Anatomical Sciences"
   },
   {
     "code": "2605",
-    "title": "Microbiological Sciences and Immunology."
+    "title": "Microbiological Sciences and Immunology"
   },
   {
     "code": "2607",
-    "title": "Zoology/Animal Biology."
+    "title": "Zoology/Animal Biology"
   },
   {
     "code": "2608",
-    "title": "Genetics."
+    "title": "Genetics"
   },
   {
     "code": "2609",
-    "title": "Physiology, Pathology and Related Sciences."
+    "title": "Physiology, Pathology and Related Sciences"
   },
   {
     "code": "2610",
-    "title": "Pharmacology and Toxicology."
+    "title": "Pharmacology and Toxicology"
   },
   {
     "code": "2611",
-    "title": "Biomathematics, Bioinformatics, and Computational Biology."
+    "title": "Biomathematics, Bioinformatics, and Computational Biology"
   },
   {
     "code": "2612",
-    "title": "Biotechnology."
+    "title": "Biotechnology"
   },
   {
     "code": "2613",
-    "title": "Ecology, Evolution, Systematics, and Population Biology."
+    "title": "Ecology, Evolution, Systematics, and Population Biology"
   },
   {
     "code": "2614",
-    "title": "Molecular Medicine."
+    "title": "Molecular Medicine"
   },
   {
     "code": "2615",
-    "title": "Neurobiology and Neurosciences."
+    "title": "Neurobiology and Neurosciences"
   },
   {
     "code": "2699",
-    "title": "Biological and Biomedical Sciences, Other."
+    "title": "Biological and Biomedical Sciences, Other"
   },
   {
     "code": "2701",
-    "title": "Mathematics."
+    "title": "Mathematics"
   },
   {
     "code": "2703",
-    "title": "Applied Mathematics."
+    "title": "Applied Mathematics"
   },
   {
     "code": "2705",
-    "title": "Statistics."
+    "title": "Statistics"
   },
   {
     "code": "2706",
-    "title": "Applied Statistics."
+    "title": "Applied Statistics"
   },
   {
     "code": "2799",
-    "title": "Mathematics and Statistics, Other."
+    "title": "Mathematics and Statistics, Other"
   },
   {
     "code": "2801",
-    "title": "Air Force ROTC, Air Science and Operations."
+    "title": "Air Force ROTC, Air Science and Operations"
   },
   {
     "code": "2803",
-    "title": "Army ROTC, Military Science and Operations."
+    "title": "Army ROTC, Military Science and Operations"
   },
   {
     "code": "2804",
-    "title": "Navy/Marine ROTC, Naval Science and Operations."
+    "title": "Navy/Marine ROTC, Naval Science and Operations"
   },
   {
     "code": "2805",
-    "title": "Military Science and Operational Studies."
+    "title": "Military Science and Operational Studies"
   },
   {
     "code": "2806",
-    "title": "Security Policy and Strategy."
+    "title": "Security Policy and Strategy"
   },
   {
     "code": "2807",
-    "title": "Military Economics and Management."
+    "title": "Military Economics and Management"
   },
   {
     "code": "2899",
-    "title": "Military Science, Leadership and Operational Art, Other."
+    "title": "Military Science, Leadership and Operational Art, Other"
   },
   {
     "code": "2902",
-    "title": "Intelligence, Command Control and Information Operations."
+    "title": "Intelligence, Command Control and Information Operations"
   },
   {
     "code": "2903",
-    "title": "Military Applied Sciences."
+    "title": "Military Applied Sciences"
   },
   {
     "code": "2904",
-    "title": "Military Systems and Maintenance Technology."
+    "title": "Military Systems and Maintenance Technology"
   },
   {
     "code": "2906",
-    "title": "Military Technology and Applied Sciences Management."
+    "title": "Military Technology and Applied Sciences Management"
   },
   {
     "code": "2999",
-    "title": "Military Technologies and Applied Sciences, Other."
+    "title": "Military Technologies and Applied Sciences, Other"
   },
   {
     "code": "3000",
-    "title": "Multi-/Interdisciplinary Studies, General."
+    "title": "Multi-/Interdisciplinary Studies, General"
   },
   {
     "code": "3001",
-    "title": "Biological and Physical Sciences."
+    "title": "Biological and Physical Sciences"
   },
   {
     "code": "3005",
-    "title": "Peace Studies and Conflict Resolution."
+    "title": "Peace Studies and Conflict Resolution"
   },
   {
     "code": "3006",
-    "title": "Systems Science and Theory."
+    "title": "Systems Science and Theory"
   },
   {
     "code": "3008",
-    "title": "Mathematics and Computer Science."
+    "title": "Mathematics and Computer Science"
   },
   {
     "code": "3010",
-    "title": "Biopsychology."
+    "title": "Biopsychology"
   },
   {
     "code": "3011",
-    "title": "Gerontology."
+    "title": "Gerontology"
   },
   {
     "code": "3012",
-    "title": "Historic Preservation and Conservation."
+    "title": "Historic Preservation and Conservation"
   },
   {
     "code": "3013",
-    "title": "Medieval and Renaissance Studies."
+    "title": "Medieval and Renaissance Studies"
   },
   {
     "code": "3014",
-    "title": "Museology/Museum Studies."
+    "title": "Museology/Museum Studies"
   },
   {
     "code": "3015",
-    "title": "Science, Technology and Society."
+    "title": "Science, Technology and Society"
   },
   {
     "code": "3016",
-    "title": "Accounting and Computer Science."
+    "title": "Accounting and Computer Science"
   },
   {
     "code": "3017",
-    "title": "Behavioral Sciences."
+    "title": "Behavioral Sciences"
   },
   {
     "code": "3018",
-    "title": "Natural Sciences."
+    "title": "Natural Sciences"
   },
   {
     "code": "3019",
-    "title": "Nutrition Sciences."
+    "title": "Nutrition Sciences"
   },
   {
     "code": "3020",
-    "title": "International/Globalization Studies."
+    "title": "International/Globalization Studies"
   },
   {
     "code": "3021",
-    "title": "Holocaust and Related Studies."
+    "title": "Holocaust and Related Studies"
   },
   {
     "code": "3022",
-    "title": "Classical and Ancient Studies."
+    "title": "Classical and Ancient Studies"
   },
   {
     "code": "3023",
-    "title": "Intercultural/Multicultural and Diversity Studies."
+    "title": "Intercultural/Multicultural and Diversity Studies"
   },
   {
     "code": "3025",
-    "title": "Cognitive Science."
+    "title": "Cognitive Science"
   },
   {
     "code": "3026",
-    "title": "Cultural Studies/Critical Theory and Analysis."
+    "title": "Cultural Studies/Critical Theory and Analysis"
   },
   {
     "code": "3027",
-    "title": "Human Biology."
+    "title": "Human Biology"
   },
   {
     "code": "3028",
-    "title": "Dispute Resolution."
+    "title": "Dispute Resolution"
   },
   {
     "code": "3029",
-    "title": "Maritime Studies."
+    "title": "Maritime Studies"
   },
   {
     "code": "3030",
-    "title": "Computational Science."
+    "title": "Computational Science"
   },
   {
     "code": "3031",
-    "title": "Human Computer Interaction."
+    "title": "Human Computer Interaction"
   },
   {
     "code": "3032",
-    "title": "Marine Sciences."
+    "title": "Marine Sciences"
   },
   {
     "code": "3033",
-    "title": "Sustainability Studies."
+    "title": "Sustainability Studies"
   },
   {
     "code": "3034",
-    "title": "Anthrozoology."
+    "title": "Anthrozoology"
   },
   {
     "code": "3035",
-    "title": "Climate Science."
+    "title": "Climate Science"
   },
   {
     "code": "3036",
-    "title": "Cultural Studies and Comparative Literature."
+    "title": "Cultural Studies and Comparative Literature"
   },
   {
     "code": "3037",
-    "title": "Design for Human Health."
+    "title": "Design for Human Health"
   },
   {
     "code": "3038",
-    "title": "Earth Systems Science."
+    "title": "Earth Systems Science"
   },
   {
     "code": "3039",
-    "title": "Economics and Computer Science."
+    "title": "Economics and Computer Science"
   },
   {
     "code": "3040",
-    "title": "Economics and Foreign Language/Literature."
+    "title": "Economics and Foreign Language/Literature"
   },
   {
     "code": "3041",
-    "title": "Environmental Geosciences."
+    "title": "Environmental Geosciences"
   },
   {
     "code": "3042",
-    "title": "Geoarcheaology."
+    "title": "Geoarcheaology"
   },
   {
     "code": "3043",
-    "title": "Geobiology."
+    "title": "Geobiology"
   },
   {
     "code": "3044",
-    "title": "Geography and Environmental Studies."
+    "title": "Geography and Environmental Studies"
   },
   {
     "code": "3045",
-    "title": "History and Language/Literature."
+    "title": "History and Language/Literature"
   },
   {
     "code": "3046",
-    "title": "History and Political Science."
+    "title": "History and Political Science"
   },
   {
     "code": "3047",
-    "title": "Linguistics and Anthropology."
+    "title": "Linguistics and Anthropology"
   },
   {
     "code": "3048",
-    "title": "Linguistics and Computer Science."
+    "title": "Linguistics and Computer Science"
   },
   {
     "code": "3049",
-    "title": "Mathematical Economics."
+    "title": "Mathematical Economics"
   },
   {
     "code": "3050",
-    "title": "Mathematics and Atmospheric/Oceanic Science."
+    "title": "Mathematics and Atmospheric/Oceanic Science"
   },
   {
     "code": "3051",
-    "title": "Philosophy, Politics, and Economics."
+    "title": "Philosophy, Politics, and Economics"
   },
   {
     "code": "3052",
-    "title": "Digital Humanities and Textual Studies."
+    "title": "Digital Humanities and Textual Studies"
   },
   {
     "code": "3053",
-    "title": "Thanatology."
+    "title": "Thanatology"
   },
   {
     "code": "3070",
-    "title": "Data Science."
+    "title": "Data Science"
   },
   {
     "code": "3071",
-    "title": "Data Analytics."
+    "title": "Data Analytics"
   },
   {
     "code": "3099",
-    "title": "Multi/Interdisciplinary Studies, Other."
+    "title": "Multi/Interdisciplinary Studies, Other"
   },
   {
     "code": "3101",
-    "title": "Parks, Recreation, and Leisure Studies."
+    "title": "Parks, Recreation, and Leisure Studies"
   },
   {
     "code": "3103",
-    "title": "Parks, Recreation, and Leisure Facilities Management."
+    "title": "Parks, Recreation, and Leisure Facilities Management"
   },
   {
     "code": "3105",
-    "title": "Sports, Kinesiology, and Physical Education/Fitness."
+    "title": "Sports, Kinesiology, and Physical Education/Fitness"
   },
   {
     "code": "3106",
-    "title": "Outdoor Education."
+    "title": "Outdoor Education"
   },
   {
     "code": "3199",
-    "title": "Parks, Recreation, Leisure, Fitness, and Kinesiology, Other."
+    "title": "Parks, Recreation, Leisure, Fitness, and Kinesiology, Other"
   },
   {
     "code": "3201",
-    "title": "Basic Skills and Developmental/Remedial Education."
+    "title": "Basic Skills and Developmental/Remedial Education"
   },
   {
     "code": "3202",
-    "title": "General Exam Preparation and Test-Taking Skills."
+    "title": "General Exam Preparation and Test-Taking Skills"
   },
   {
     "code": "3301",
-    "title": "Citizenship Activities."
+    "title": "Citizenship Activities"
   },
   {
     "code": "3401",
-    "title": "Health-Related Knowledge and Skills."
+    "title": "Health-Related Knowledge and Skills"
   },
   {
     "code": "3501",
-    "title": "Interpersonal and Social Skills."
+    "title": "Interpersonal and Social Skills"
   },
   {
     "code": "3601",
-    "title": "Leisure and Recreational Activities."
+    "title": "Leisure and Recreational Activities"
   },
   {
     "code": "3602",
-    "title": "Noncommercial Vehicle Operation."
+    "title": "Noncommercial Vehicle Operation"
   },
   {
     "code": "3701",
-    "title": "Personal Awareness and Self-Improvement."
+    "title": "Personal Awareness and Self-Improvement"
   },
   {
     "code": "3800",
-    "title": "Philosophy and Religious Studies, General."
+    "title": "Philosophy and Religious Studies, General"
   },
   {
     "code": "3801",
-    "title": "Philosophy."
+    "title": "Philosophy"
   },
   {
     "code": "3802",
-    "title": "Religion/Religious Studies."
+    "title": "Religion/Religious Studies"
   },
   {
     "code": "3899",
-    "title": "Philosophy and Religious Studies, Other."
+    "title": "Philosophy and Religious Studies, Other"
   },
   {
     "code": "3902",
-    "title": "Bible/Biblical Studies."
+    "title": "Bible/Biblical Studies"
   },
   {
     "code": "3903",
-    "title": "Missions/Missionary Studies and Missiology."
+    "title": "Missions/Missionary Studies and Missiology"
   },
   {
     "code": "3904",
-    "title": "Religious Education."
+    "title": "Religious Education"
   },
   {
     "code": "3905",
-    "title": "Religious Music and Worship."
+    "title": "Religious Music and Worship"
   },
   {
     "code": "3906",
-    "title": "Theological and Ministerial Studies."
+    "title": "Theological and Ministerial Studies"
   },
   {
     "code": "3907",
-    "title": "Pastoral Counseling and Specialized Ministries."
+    "title": "Pastoral Counseling and Specialized Ministries"
   },
   {
     "code": "3908",
-    "title": "Religious Institution Administration and Law."
+    "title": "Religious Institution Administration and Law"
   },
   {
     "code": "3999",
-    "title": "Theology and Religious Vocations, Other."
+    "title": "Theology and Religious Vocations, Other"
   },
   {
     "code": "4001",
-    "title": "Physical Sciences, General."
+    "title": "Physical Sciences, General"
   },
   {
     "code": "4002",
-    "title": "Astronomy and Astrophysics."
+    "title": "Astronomy and Astrophysics"
   },
   {
     "code": "4004",
-    "title": "Atmospheric Sciences and Meteorology."
+    "title": "Atmospheric Sciences and Meteorology"
   },
   {
     "code": "4005",
-    "title": "Chemistry."
+    "title": "Chemistry"
   },
   {
     "code": "4006",
-    "title": "Geological and Earth Sciences/Geosciences."
+    "title": "Geological and Earth Sciences/Geosciences"
   },
   {
     "code": "4008",
-    "title": "Physics."
+    "title": "Physics"
   },
   {
     "code": "4010",
-    "title": "Materials Sciences."
+    "title": "Materials Sciences"
   },
   {
     "code": "4011",
-    "title": "Physics and Astronomy."
+    "title": "Physics and Astronomy"
   },
   {
     "code": "4099",
-    "title": "Physical Sciences, Other."
+    "title": "Physical Sciences, Other"
   },
   {
     "code": "4100",
-    "title": "Science Technologies/Technicians, General."
+    "title": "Science Technologies/Technicians, General"
   },
   {
     "code": "4101",
-    "title": "Biology/Biotechnology Technologies/Technicians."
+    "title": "Biology/Biotechnology Technologies/Technicians"
   },
   {
     "code": "4102",
-    "title": "Nuclear and Industrial Radiologic Technologies/Technicians."
+    "title": "Nuclear and Industrial Radiologic Technologies/Technicians"
   },
   {
     "code": "4103",
-    "title": "Physical Science Technologies/Technicians."
+    "title": "Physical Science Technologies/Technicians"
   },
   {
     "code": "4199",
-    "title": "Science Technologies/Technicians, Other."
+    "title": "Science Technologies/Technicians, Other"
   },
   {
     "code": "4201",
-    "title": "Psychology, General."
+    "title": "Psychology, General"
   },
   {
     "code": "4227",
-    "title": "Research and Experimental Psychology."
+    "title": "Research and Experimental Psychology"
   },
   {
     "code": "4228",
-    "title": "Clinical, Counseling and Applied Psychology."
+    "title": "Clinical, Counseling and Applied Psychology"
   },
   {
     "code": "4299",
-    "title": "Psychology, Other."
+    "title": "Psychology, Other"
   },
   {
     "code": "4301",
-    "title": "Criminal Justice and Corrections."
+    "title": "Criminal Justice and Corrections"
   },
   {
     "code": "4302",
-    "title": "Fire Protection."
+    "title": "Fire Protection"
   },
   {
     "code": "4303",
-    "title": "Homeland Security."
+    "title": "Homeland Security"
   },
   {
     "code": "4304",
-    "title": "Security Science and Technology."
+    "title": "Security Science and Technology"
   },
   {
     "code": "4399",
-    "title": "Homeland Security, Law Enforcement, Firefighting and Related Protective Services, Other."
+    "title": "Homeland Security, Law Enforcement, Firefighting and Related Protective Services, Other"
   },
   {
     "code": "4400",
-    "title": "Human Services, General."
+    "title": "Human Services, General"
   },
   {
     "code": "4402",
-    "title": "Community Organization and Advocacy."
+    "title": "Community Organization and Advocacy"
   },
   {
     "code": "4404",
-    "title": "Public Administration."
+    "title": "Public Administration"
   },
   {
     "code": "4405",
-    "title": "Public Policy Analysis."
+    "title": "Public Policy Analysis"
   },
   {
     "code": "4407",
-    "title": "Social Work."
+    "title": "Social Work"
   },
   {
     "code": "4499",
-    "title": "Public Administration and Social Service Professions, Other."
+    "title": "Public Administration and Social Service Professions, Other"
   },
   {
     "code": "4501",
-    "title": "Social Sciences, General."
+    "title": "Social Sciences, General"
   },
   {
     "code": "4502",
-    "title": "Anthropology."
+    "title": "Anthropology"
   },
   {
     "code": "4503",
-    "title": "Archeology."
+    "title": "Archeology"
   },
   {
     "code": "4504",
-    "title": "Criminology."
+    "title": "Criminology"
   },
   {
     "code": "4505",
-    "title": "Demography."
+    "title": "Demography"
   },
   {
     "code": "4506",
-    "title": "Economics."
+    "title": "Economics"
   },
   {
     "code": "4507",
-    "title": "Geography and Cartography."
+    "title": "Geography and Cartography"
   },
   {
     "code": "4509",
-    "title": "International Relations and National Security Studies."
+    "title": "International Relations and National Security Studies"
   },
   {
     "code": "4510",
-    "title": "Political Science and Government."
+    "title": "Political Science and Government"
   },
   {
     "code": "4511",
-    "title": "Sociology."
+    "title": "Sociology"
   },
   {
     "code": "4512",
-    "title": "Urban Studies/Affairs."
+    "title": "Urban Studies/Affairs"
   },
   {
     "code": "4513",
-    "title": "Sociology and Anthropology."
+    "title": "Sociology and Anthropology"
   },
   {
     "code": "4514",
-    "title": "Rural Sociology."
+    "title": "Rural Sociology"
   },
   {
     "code": "4515",
-    "title": "Geography and Anthropology."
+    "title": "Geography and Anthropology"
   },
   {
     "code": "4599",
-    "title": "Social Sciences, Other."
+    "title": "Social Sciences, Other"
   },
   {
     "code": "4600",
-    "title": "Construction Trades, General."
+    "title": "Construction Trades, General"
   },
   {
     "code": "4601",
-    "title": "Mason/Masonry."
+    "title": "Mason/Masonry"
   },
   {
     "code": "4602",
-    "title": "Carpenters."
+    "title": "Carpenters"
   },
   {
     "code": "4603",
-    "title": "Electrical and Power Transmission Installers."
+    "title": "Electrical and Power Transmission Installers"
   },
   {
     "code": "4604",
-    "title": "Building/Construction Finishing, Management, and Inspection."
+    "title": "Building/Construction Finishing, Management, and Inspection"
   },
   {
     "code": "4605",
-    "title": "Plumbing and Related Water Supply Services."
+    "title": "Plumbing and Related Water Supply Services"
   },
   {
     "code": "4699",
-    "title": "Construction Trades, Other."
+    "title": "Construction Trades, Other"
   },
   {
     "code": "4700",
-    "title": "Mechanics and Repairers, General."
+    "title": "Mechanics and Repairers, General"
   },
   {
     "code": "4701",
-    "title": "Electrical/Electronics Maintenance and Repair Technologies/Technicians."
+    "title": "Electrical/Electronics Maintenance and Repair Technologies/Technicians"
   },
   {
     "code": "4702",
-    "title": "Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR)."
+    "title": "Heating, Air Conditioning, Ventilation and Refrigeration Maintenance Technology/Technician (HAC, HACR, HVAC, HVACR)"
   },
   {
     "code": "4703",
-    "title": "Heavy/Industrial Equipment Maintenance Technologies/Technicians."
+    "title": "Heavy/Industrial Equipment Maintenance Technologies/Technicians"
   },
   {
     "code": "4704",
-    "title": "Precision Systems Maintenance and Repair Technologies/Technicians."
+    "title": "Precision Systems Maintenance and Repair Technologies/Technicians"
   },
   {
     "code": "4706",
-    "title": "Vehicle Maintenance and Repair Technologies/Technicians."
+    "title": "Vehicle Maintenance and Repair Technologies/Technicians"
   },
   {
     "code": "4707",
-    "title": "Energy Systems Maintenance and Repair Technologies/Technicians."
+    "title": "Energy Systems Maintenance and Repair Technologies/Technicians"
   },
   {
     "code": "4799",
-    "title": "Mechanic and Repair Technologies/Technicians, Other."
+    "title": "Mechanic and Repair Technologies/Technicians, Other"
   },
   {
     "code": "4800",
-    "title": "Precision Production Trades, General."
+    "title": "Precision Production Trades, General"
   },
   {
     "code": "4803",
-    "title": "Leatherworking and Upholstery."
+    "title": "Leatherworking and Upholstery"
   },
   {
     "code": "4805",
-    "title": "Precision Metal Working."
+    "title": "Precision Metal Working"
   },
   {
     "code": "4807",
-    "title": "Woodworking."
+    "title": "Woodworking"
   },
   {
     "code": "4808",
-    "title": "Boilermaking/Boilermaker."
+    "title": "Boilermaking/Boilermaker"
   },
   {
     "code": "4899",
-    "title": "Precision Production, Other."
+    "title": "Precision Production, Other"
   },
   {
     "code": "4901",
-    "title": "Air Transportation."
+    "title": "Air Transportation"
   },
   {
     "code": "4902",
-    "title": "Ground Transportation."
+    "title": "Ground Transportation"
   },
   {
     "code": "4903",
-    "title": "Marine Transportation."
+    "title": "Marine Transportation"
   },
   {
     "code": "4999",
-    "title": "Transportation and Materials Moving, Other."
+    "title": "Transportation and Materials Moving, Other"
   },
   {
     "code": "5001",
-    "title": "Visual and Performing Arts, General."
+    "title": "Visual and Performing Arts, General"
   },
   {
     "code": "5002",
-    "title": "Crafts/Craft Design, Folk Art and Artisanry."
+    "title": "Crafts/Craft Design, Folk Art and Artisanry"
   },
   {
     "code": "5003",
-    "title": "Dance."
+    "title": "Dance"
   },
   {
     "code": "5004",
-    "title": "Design and Applied Arts."
+    "title": "Design and Applied Arts"
   },
   {
     "code": "5005",
-    "title": "Drama/Theatre Arts and Stagecraft."
+    "title": "Drama/Theatre Arts and Stagecraft"
   },
   {
     "code": "5006",
-    "title": "Film/Video and Photographic Arts."
+    "title": "Film/Video and Photographic Arts"
   },
   {
     "code": "5007",
-    "title": "Fine and Studio Arts."
+    "title": "Fine and Studio Arts"
   },
   {
     "code": "5009",
-    "title": "Music."
+    "title": "Music"
   },
   {
     "code": "5010",
-    "title": "Arts, Entertainment, and Media Management."
+    "title": "Arts, Entertainment, and Media Management"
   },
   {
     "code": "5011",
-    "title": "Community/Environmental/Socially-Engaged Art."
+    "title": "Community/Environmental/Socially-Engaged Art"
   },
   {
     "code": "5099",
-    "title": "Visual and Performing Arts, Other."
+    "title": "Visual and Performing Arts, Other"
   },
   {
     "code": "5100",
-    "title": "Health Services/Allied Health/Health Sciences, General."
+    "title": "Health Services/Allied Health/Health Sciences, General"
   },
   {
     "code": "5101",
-    "title": "Chiropractic."
+    "title": "Chiropractic"
   },
   {
     "code": "5102",
-    "title": "Communication Disorders Sciences and Services."
+    "title": "Communication Disorders Sciences and Services"
   },
   {
     "code": "5104",
-    "title": "Dentistry."
+    "title": "Dentistry"
   },
   {
     "code": "5105",
-    "title": "Advanced/Graduate Dentistry and Oral Sciences."
+    "title": "Advanced/Graduate Dentistry and Oral Sciences"
   },
   {
     "code": "5106",
-    "title": "Dental Support Services and Allied Professions."
+    "title": "Dental Support Services and Allied Professions"
   },
   {
     "code": "5107",
-    "title": "Health and Medical Administrative Services."
+    "title": "Health and Medical Administrative Services"
   },
   {
     "code": "5108",
-    "title": "Allied Health and Medical Assisting Services."
+    "title": "Allied Health and Medical Assisting Services"
   },
   {
     "code": "5109",
-    "title": "Allied Health Diagnostic, Intervention, and Treatment Professions."
+    "title": "Allied Health Diagnostic, Intervention, and Treatment Professions"
   },
   {
     "code": "5110",
-    "title": "Clinical/Medical Laboratory Science/Research and Allied Professions."
+    "title": "Clinical/Medical Laboratory Science/Research and Allied Professions"
   },
   {
     "code": "5111",
-    "title": "Health/Medical Preparatory Programs."
+    "title": "Health/Medical Preparatory Programs"
   },
   {
     "code": "5112",
-    "title": "Medicine."
+    "title": "Medicine"
   },
   {
     "code": "5114",
-    "title": "Medical Clinical Sciences/Graduate Medical Studies."
+    "title": "Medical Clinical Sciences/Graduate Medical Studies"
   },
   {
     "code": "5115",
-    "title": "Mental and Social Health Services and Allied Professions."
+    "title": "Mental and Social Health Services and Allied Professions"
   },
   {
     "code": "5117",
-    "title": "Optometry."
+    "title": "Optometry"
   },
   {
     "code": "5118",
-    "title": "Ophthalmic and Optometric Support Services and Allied Professions."
+    "title": "Ophthalmic and Optometric Support Services and Allied Professions"
   },
   {
     "code": "5119",
-    "title": "Osteopathic Medicine/Osteopathy."
+    "title": "Osteopathic Medicine/Osteopathy"
   },
   {
     "code": "5120",
-    "title": "Pharmacy, Pharmaceutical Sciences, and Administration."
+    "title": "Pharmacy, Pharmaceutical Sciences, and Administration"
   },
   {
     "code": "5121",
-    "title": "Podiatric Medicine/Podiatry."
+    "title": "Podiatric Medicine/Podiatry"
   },
   {
     "code": "5122",
-    "title": "Public Health."
+    "title": "Public Health"
   },
   {
     "code": "5123",
-    "title": "Rehabilitation and Therapeutic Professions."
+    "title": "Rehabilitation and Therapeutic Professions"
   },
   {
     "code": "5124",
-    "title": "Veterinary Medicine."
+    "title": "Veterinary Medicine"
   },
   {
     "code": "5125",
-    "title": "Veterinary Biomedical and Clinical Sciences."
+    "title": "Veterinary Biomedical and Clinical Sciences"
   },
   {
     "code": "5126",
-    "title": "Health Aides/Attendants/Orderlies."
+    "title": "Health Aides/Attendants/Orderlies"
   },
   {
     "code": "5127",
-    "title": "Medical Illustration and Informatics."
+    "title": "Medical Illustration and Informatics"
   },
   {
     "code": "5131",
-    "title": "Dietetics and Clinical Nutrition Services."
+    "title": "Dietetics and Clinical Nutrition Services"
   },
   {
     "code": "5132",
-    "title": "Health Professions Education, Ethics, and Humanities."
+    "title": "Health Professions Education, Ethics, and Humanities"
   },
   {
     "code": "5133",
-    "title": "Alternative and Complementary Medicine and Medical Systems."
+    "title": "Alternative and Complementary Medicine and Medical Systems"
   },
   {
     "code": "5134",
-    "title": "Alternative and Complementary Medical Support Services."
+    "title": "Alternative and Complementary Medical Support Services"
   },
   {
     "code": "5135",
-    "title": "Somatic Bodywork and Related Therapeutic Services."
+    "title": "Somatic Bodywork and Related Therapeutic Services"
   },
   {
     "code": "5136",
-    "title": "Movement and Mind-Body Therapies and Education."
+    "title": "Movement and Mind-Body Therapies and Education"
   },
   {
     "code": "5137",
-    "title": "Energy and Biologically Based Therapies."
+    "title": "Energy and Biologically Based Therapies"
   },
   {
     "code": "5138",
-    "title": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing."
+    "title": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing"
   },
   {
     "code": "5139",
-    "title": "Practical Nursing, Vocational Nursing and Nursing Assistants."
+    "title": "Practical Nursing, Vocational Nursing and Nursing Assistants"
   },
   {
     "code": "5199",
-    "title": "Health Professions and Related Clinical Sciences, Other."
+    "title": "Health Professions and Related Clinical Sciences, Other"
   },
   {
     "code": "5201",
-    "title": "Business/Commerce, General."
+    "title": "Business/Commerce, General"
   },
   {
     "code": "5202",
-    "title": "Business Administration, Management and Operations."
+    "title": "Business Administration, Management and Operations"
   },
   {
     "code": "5203",
-    "title": "Accounting and Related Services."
+    "title": "Accounting and Related Services"
   },
   {
     "code": "5204",
-    "title": "Business Operations Support and Assistant Services."
+    "title": "Business Operations Support and Assistant Services"
   },
   {
     "code": "5205",
-    "title": "Business/Corporate Communications."
+    "title": "Business/Corporate Communications"
   },
   {
     "code": "5206",
-    "title": "Business/Managerial Economics."
+    "title": "Business/Managerial Economics"
   },
   {
     "code": "5207",
-    "title": "Entrepreneurial and Small Business Operations."
+    "title": "Entrepreneurial and Small Business Operations"
   },
   {
     "code": "5208",
-    "title": "Finance and Financial Management Services."
+    "title": "Finance and Financial Management Services"
   },
   {
     "code": "5209",
-    "title": "Hospitality Administration/Management."
+    "title": "Hospitality Administration/Management"
   },
   {
     "code": "5210",
-    "title": "Human Resources Management and Services."
+    "title": "Human Resources Management and Services"
   },
   {
     "code": "5211",
-    "title": "International Business."
+    "title": "International Business"
   },
   {
     "code": "5212",
-    "title": "Management Information Systems and Services."
+    "title": "Management Information Systems and Services"
   },
   {
     "code": "5213",
-    "title": "Management Sciences and Quantitative Methods."
+    "title": "Management Sciences and Quantitative Methods"
   },
   {
     "code": "5214",
-    "title": "Marketing."
+    "title": "Marketing"
   },
   {
     "code": "5215",
-    "title": "Real Estate."
+    "title": "Real Estate"
   },
   {
     "code": "5216",
-    "title": "Taxation."
+    "title": "Taxation"
   },
   {
     "code": "5217",
-    "title": "Insurance."
+    "title": "Insurance"
   },
   {
     "code": "5218",
-    "title": "General Sales, Merchandising and Related Marketing Operations."
+    "title": "General Sales, Merchandising and Related Marketing Operations"
   },
   {
     "code": "5219",
-    "title": "Specialized Sales, Merchandising and  Marketing Operations."
+    "title": "Specialized Sales, Merchandising and  Marketing Operations"
   },
   {
     "code": "5220",
-    "title": "Construction Management."
+    "title": "Construction Management"
   },
   {
     "code": "5221",
-    "title": "Telecommunications Management."
+    "title": "Telecommunications Management"
   },
   {
     "code": "5299",
-    "title": "Business, Management, Marketing, and Related Support Services, Other."
+    "title": "Business, Management, Marketing, and Related Support Services, Other"
   },
   {
     "code": "5301",
-    "title": "High School/Secondary Diploma Programs."
+    "title": "High School/Secondary Diploma Programs"
   },
   {
     "code": "5302",
-    "title": "High School/Secondary Certificate Programs."
+    "title": "High School/Secondary Certificate Programs"
   },
   {
     "code": "5401",
-    "title": "History."
+    "title": "History"
   },
   {
     "code": "6001",
-    "title": "Dental Residency/Fellowship Programs."
+    "title": "Dental Residency/Fellowship Programs"
   },
   {
     "code": "6003",
-    "title": "Veterinary Residency/Fellowship Programs."
+    "title": "Veterinary Residency/Fellowship Programs"
   },
   {
     "code": "6004",
-    "title": "Medical Residency Programs - General Certificates."
+    "title": "Medical Residency Programs - General Certificates"
   },
   {
     "code": "6005",
-    "title": "Medical Residency Programs - Subspecialty Certificates."
+    "title": "Medical Residency Programs - Subspecialty Certificates"
   },
   {
     "code": "6006",
-    "title": "Podiatric Medicine Residency Programs."
+    "title": "Podiatric Medicine Residency Programs"
   },
   {
     "code": "6007",
-    "title": "Nurse Practitioner Residency/Fellowship Programs."
+    "title": "Nurse Practitioner Residency/Fellowship Programs"
   },
   {
     "code": "6008",
-    "title": "Pharmacy Residency/Fellowship Programs."
+    "title": "Pharmacy Residency/Fellowship Programs"
   },
   {
     "code": "6009",
-    "title": "Physician Assistant Residency/Fellowship Programs."
+    "title": "Physician Assistant Residency/Fellowship Programs"
   },
   {
     "code": "6099",
-    "title": "Health Professions Residency/Fellowship Programs, Other."
+    "title": "Health Professions Residency/Fellowship Programs, Other"
   },
   {
     "code": "6101",
-    "title": "Combined Medical Residency/Fellowship Programs."
+    "title": "Combined Medical Residency/Fellowship Programs"
   },
   {
     "code": "6102",
-    "title": "Multiple-Pathway Medical Fellowship Programs."
+    "title": "Multiple-Pathway Medical Fellowship Programs"
   },
   {
     "code": "6103",
-    "title": "Allergy and Immunology Residency/Fellowship Programs."
+    "title": "Allergy and Immunology Residency/Fellowship Programs"
   },
   {
     "code": "6104",
-    "title": "Anesthesiology Residency/Fellowship Programs."
+    "title": "Anesthesiology Residency/Fellowship Programs"
   },
   {
     "code": "6105",
-    "title": "Dermatology Residency/Fellowship Programs."
+    "title": "Dermatology Residency/Fellowship Programs"
   },
   {
     "code": "6106",
-    "title": "Emergency Medicine Residency/Fellowship Programs."
+    "title": "Emergency Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6107",
-    "title": "Family Medicine Residency/Fellowship Programs."
+    "title": "Family Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6108",
-    "title": "Internal Medicine Residency/Fellowship Programs."
+    "title": "Internal Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6109",
-    "title": "Medical Genetics and Genomics Residency/Fellowship Programs."
+    "title": "Medical Genetics and Genomics Residency/Fellowship Programs"
   },
   {
     "code": "6110",
-    "title": "Neurological Surgery Residency/Fellowship Programs."
+    "title": "Neurological Surgery Residency/Fellowship Programs"
   },
   {
     "code": "6111",
-    "title": "Neurology Residency/Fellowship Programs."
+    "title": "Neurology Residency/Fellowship Programs"
   },
   {
     "code": "6112",
-    "title": "Nuclear Medicine Residency/Fellowship Programs."
+    "title": "Nuclear Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6113",
-    "title": "Obstetrics and Gynecology Residency/Fellowship Programs."
+    "title": "Obstetrics and Gynecology Residency/Fellowship Programs"
   },
   {
     "code": "6114",
-    "title": "Ophthalmology Residency/Fellowship Programs."
+    "title": "Ophthalmology Residency/Fellowship Programs"
   },
   {
     "code": "6115",
-    "title": "Orthopedic Surgery Residency/Fellowship Programs."
+    "title": "Orthopedic Surgery Residency/Fellowship Programs"
   },
   {
     "code": "6116",
-    "title": "Osteopathic Medicine Residency/Fellowship Programs."
+    "title": "Osteopathic Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6117",
-    "title": "Otolaryngology Residency/Fellowship Programs."
+    "title": "Otolaryngology Residency/Fellowship Programs"
   },
   {
     "code": "6118",
-    "title": "Pathology Residency/Fellowship Programs."
+    "title": "Pathology Residency/Fellowship Programs"
   },
   {
     "code": "6119",
-    "title": "Pediatrics Residency/Fellowship Programs."
+    "title": "Pediatrics Residency/Fellowship Programs"
   },
   {
     "code": "6120",
-    "title": "Physical Medicine and Rehabilitation Residency/Fellowship Programs."
+    "title": "Physical Medicine and Rehabilitation Residency/Fellowship Programs"
   },
   {
     "code": "6121",
-    "title": "Plastic Surgery Residency/Fellowship Programs."
+    "title": "Plastic Surgery Residency/Fellowship Programs"
   },
   {
     "code": "6122",
-    "title": "Podiatric Medicine Residency/Fellowship Programs."
+    "title": "Podiatric Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6123",
-    "title": "Preventive Medicine Residency/Fellowship Programs."
+    "title": "Preventive Medicine Residency/Fellowship Programs"
   },
   {
     "code": "6124",
-    "title": "Psychiatry Residency/Fellowship Programs."
+    "title": "Psychiatry Residency/Fellowship Programs"
   },
   {
     "code": "6125",
-    "title": "Radiation Oncology Residency/Fellowship Programs."
+    "title": "Radiation Oncology Residency/Fellowship Programs"
   },
   {
     "code": "6126",
-    "title": "Radiology Residency/Fellowship Programs."
+    "title": "Radiology Residency/Fellowship Programs"
   },
   {
     "code": "6127",
-    "title": "Surgery Residency/Fellowship Programs."
+    "title": "Surgery Residency/Fellowship Programs"
   },
   {
     "code": "6128",
-    "title": "Urology Residency/Fellowship Programs."
+    "title": "Urology Residency/Fellowship Programs"
   },
   {
     "code": "6199",
-    "title": "Medical Residency/Fellowship Programs, Other."
+    "title": "Medical Residency/Fellowship Programs, Other"
   }
 ]
-
-
-
